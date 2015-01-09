@@ -1,0 +1,79 @@
+.modal {
+	border-width: 0 0 0 30px;
+	border-style: inset;
+	border-image: url("/altendis-theme/images/altendis/ring.png") 0 0 0 50 round;
+	border-image-outset: 0 12px;
+	background:white;
+}
+
+.portal-popup {
+	background:white;
+}
+
+.modal-formation-bg {
+	background:white;
+	padding:0px;
+	width:auto;
+	font-size:1em;
+	/* gradients - second red border, first red border, top white space, blue lines */
+    background-image:  -webkit-linear-gradient(left, rgba(255,85,91, 0), rgba(255,85,91, 0)), -webkit-linear-gradient(left, rgba(255,85,91, 0), rgba(255,85,91, 0)), -webkit-linear-gradient(top, white 0px, white 69px, rgba(255,255,255,0) 70px), -webkit-repeating-linear-gradient(white 0px, white 18px, #A6FFED 19px, white 20px);
+    background-image:  -moz-linear-gradient(left, rgba(255,85,91, 0), rgba(255,85,91, 0)), -moz-linear-gradient(left, rgba(255,85,91, 0), rgba(255,85,91, 0)), -moz-linear-gradient(top, white 0px, white 69px, rgba(255,255,255,0) 70px), -moz-repeating-linear-gradient(white 0px, white 18px, #A6FFED 19px, white 20px);
+    background-image:  -ms-linear-gradient(left, rgba(255,85,91, 0), rgba(255,85,91, 0)), -ms-linear-gradient(left, rgba(255,85,91, 0), rgba(255,85,91, 0)), -ms-linear-gradient(top, white 0px, white 69px, rgba(255,255,255,0) 70px), -ms-repeating-linear-gradient(white 0px, white 18px, #A6FFED 19px, white 20px);
+    background-image:  -o-linear-gradient(left, rgba(255,85,91, 0), rgba(255,85,91, 0)), -o-linear-gradient(left, rgba(255,85,91, 0), rgba(255,85,91, 0)), -o-linear-gradient(top, white 0px, white 69px, rgba(255,255,255,0) 70px), -o-repeating-linear-gradient(white 0px, white 18px, #A6FFED 19px, white 20px);
+    background-image:  linear-gradient(left, rgba(255,85,91, 0), rgba(255,85,91, 0)), linear-gradient(left, rgba(255,85,91, 0), rgba(255,85,91, 0)), linear-gradient(top, white 0px, white 69px, rgba(255,255,255,0) 70px), repeating-linear-gradient(white 0px, white 18px, #A6FFED 19px, white 20px);
+    background-size: 1px, 1px, auto, auto 1.2em;
+    background-repeat: repeat-y, repeat-y, no-repeat, repeat;
+    background-position: 90% 0px, 10% 0px, 0px 0px, 0px 0px;
+
+    
+    .modal-formation-content {
+		margin: 0;
+	    display: block;
+	    //font: 1.3em Arial, sans-serif;    
+	    line-height: 1.2em;
+	    padding-top: 60px;
+	    padding-left: 10px;
+		padding-right: 20px;
+	    text-align: justify;
+	    
+	    h2 {
+	        margin: 22px 0px !important;
+		} 
+	    
+	    h3 {
+	        margin-top: 25px !important;
+		}
+		
+		ul {
+			padding-top: 3px;
+			margin: 0px 0px 0px 25px;
+		}
+	    
+	    li {
+		    line-height: 1.2em;
+			font-size: 1em;
+	    }
+	    
+    	p {
+		    margin: 0px 0px 20px;
+		}
+	}
+}
+
+@include respond-to(tablet, desktop) {
+	.modal-formation-bg {
+		padding:20px 50px;
+		/* gradients - second red border, first red border, top white space, blue lines */
+	    background-image:  -webkit-linear-gradient(left, rgba(255,85,91, .2), rgba(255,85,91, .2)), -webkit-linear-gradient(left, rgba(255,85,91, .8), rgba(255,85,91, .8)), -webkit-linear-gradient(top, white 0px, white 69px, rgba(255,255,255,0) 70px), -webkit-repeating-linear-gradient(white 0px, white 18px, #A6FFED 19px, white 20px);
+	    background-image:  -moz-linear-gradient(left, rgba(255,85,91, .2), rgba(255,85,91, .2)), -moz-linear-gradient(left, rgba(255,85,91, .8), rgba(255,85,91, .8)), -moz-linear-gradient(top, white 0px, white 69px, rgba(255,255,255,0) 70px), -moz-repeating-linear-gradient(white 0px, white 18px, #A6FFED 19px, white 20px);
+	    background-image:  -ms-linear-gradient(left, rgba(255,85,91, .2), rgba(255,85,91, .2)), -ms-linear-gradient(left, rgba(255,85,91, .8), rgba(255,85,91, .8)), -ms-linear-gradient(top, white 0px, white 69px, rgba(255,255,255,0) 70px), -ms-repeating-linear-gradient(white 0px, white 18px, #A6FFED 19px, white 20px);
+	    background-image:  -o-linear-gradient(left, rgba(255,85,91, .2), rgba(255,85,91, .2)), -o-linear-gradient(left, rgba(255,85,91, .8), rgba(255,85,91, .8)), -o-linear-gradient(top, white 0px, white 69px, rgba(255,255,255,0) 70px), -o-repeating-linear-gradient(white 0px, white 18px, #A6FFED 19px, white 20px);
+	    background-image:  linear-gradient(left, rgba(255,85,91, .2), rgba(255,85,91, .2)), linear-gradient(left, rgba(255,85,91, .8), rgba(255,85,91, .8)), linear-gradient(top, white 0px, white 69px, rgba(255,255,255,0) 70px), repeating-linear-gradient(white 0px, white 18px, #A6FFED 19px, white 20px);
+	
+	
+		.modal-formation-content {
+		    padding-left: 6.5%;
+	    	padding-right: 8.5%;
+		}
+	}
+}

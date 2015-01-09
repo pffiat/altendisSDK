@@ -1,0 +1,20 @@
+#*
+This file allows you to override and define new Velocity variables.
+*#
+#set ($layout_local_service = $serviceLocator.findService("com.liferay.portal.service.LayoutLocalService"))
+
+#set ($show_breadcrumbs = false)
+
+#if ($theme.getSetting("show-list-formation") == "true")
+	#set ($show-list-formation = true)
+#end
+
+#set ($show_navigation = true)
+
+#if ($theme.getSetting("show-navigation") == "false")
+	#set ($show_navigation = false)
+#end
+
+#if ($theme.getSetting("show-logo") == "true")
+	#set ($show-logo = true)
+#end

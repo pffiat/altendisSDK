@@ -1,0 +1,56 @@
+<div class="footer-theme">
+	<div class="footer-bg"></div>
+
+	<!-- Light effect on top -->
+	<div class="footer-light-effect">&nbsp;</div>
+
+
+	<div class="footer-column footer-column-right">
+	<div class="quote">
+		<p><i class="fa fa-quote-left"></i>
+			We appreciate Altendis’ commitment to the development of Java professionals with real open source experience. Their commitment to our partnership has made well qualified Liferay practitioners available for the French and Francophone markets.
+			<i class="fa fa-quote-right"></i></p>
+			<img alt="Bryan Cheung" src="$images_folder/altendis/bryan-cheung.png" class="img-rounded pull-left" style="width: 150px;">
+			<p class="text-right" style="margin-top:10px;"><small>Bryan Cheung - CEO Liferay</small></p>
+
+		</div>
+	</div>
+
+	<!-- Contact form -->
+	<div class="footer-column">
+		<div class="footer-title"><i class="fa fa-building-o"></i>&nbsp;&nbsp;&nbsp;Adresse</div>
+		<div class="footer-text">
+			Altendis<br />
+			45-47 avenue Carnot<br />
+			94230 Cachan<br /><br />
+		</div>
+
+		<div class="phone-label">Mail</div>
+		<span class="phone-text"><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;&nbsp;contact@altendis.fr</span><br />
+
+		<div class="phone-label">Tél</div>
+		<span class="phone-text"><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;+33 (0) 1 41 24 43 20</span><br/>
+
+		<div class="phone-label">Fax</div>
+		<span class="phone-text"><i class="fa fa-fax"></i>&nbsp;&nbsp;&nbsp;+33 (0) 1 41 24 43 21</span><br />
+
+		<br />
+
+		<div class="footer-text">
+			<a href="http://www.excilys.com/">Groupe Excilys</a> -
+			<a href="http://blog.excilys.com/">Blog</a> -
+			<a href="http://labs.excilys.com/">Labs</a>
+		</div>
+	</div>
+
+	<div class="footer-copyright">
+		<a href="#aboutModal" role="button" data-toggle="modal">Mentions Légales</a> - ©2015 Altendis 2005-2015<br />
+		Altendis SARL au capital de 50 000 € RCS de Créteil 480 397 069 00039 
+	</div>
+	
+	#if ($is_signed_in)
+		<a class="btn btn-mini btn-inverse btn-signin" href="$sign_out_url" id="sign-in" rel="nofollow">$sign_out_text</a>
+	#else
+		<a class="btn btn-mini btn-inverse btn-signin" href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+	#end
+</div>

@@ -1,0 +1,155 @@
+h2, h3 {
+	color:#3A6375
+}
+
+h1 {
+	color:#3D729F;
+	margin-bottom: 30px;
+}
+
+hr { 
+    height: 1px;
+    background: linear-gradient(to right, rgba(41, 169, 223, 0.1) 0%, rgba(41, 169, 223, 0.6) 50%, rgba(41, 169, 223, 0.1) 100%) repeat scroll 0% 0% transparent;
+    border:0;
+}
+
+li {
+    line-height: 1.5em;
+    font-size: 0.9em;
+}
+
+#main-content-altendis {
+	padding: 2em 0 0;
+}
+
+
+.liste-formations {
+	color:#3d729f;
+	margin-top:20px;
+	text-align: center;
+	
+	.span4 {
+		width: 95%;
+	}
+	
+	> li {
+		margin-left: 20px !important
+	}
+	
+	.thumbnail {
+		color:#3d729f;
+		text-decoration: none;
+		box-shadow: 1px 0px 5px 0px #aaa;
+		padding: 10px 15px 5px;
+		background-color: white;
+		border-width: 0 0 0 30px;
+		border-style: inset;
+		border-image: url("/altendis-theme/images/altendis/ring.png") 0 0 0 50 round;
+		border-image-outset: 0 12px;
+		
+		&:hover{
+			color:white;
+			background:#3D729F;
+		}
+	}
+}
+
+.contentPage{
+	background-color:#F3F3F3;
+	width:100%;
+	border: 2px solid #fff;
+	box-shadow: 2px 8px 8px #aaa;
+	-moz-box-shadow: 2px 8px 8px #aaa;
+	-webkit-box-shadow: 2px 8px 8px #aaa;
+}
+
+.image-formation {
+	position: relative;
+	left: 50%;
+	margin-left: -76px;
+}
+
+.list-next-training {
+    font-weight: bold;
+}
+
+.formation-overview {
+	.btn {
+		background: none;
+	}
+	
+	.icone {
+		margin: 10px 20px 30px 10px;
+		text-align: center;
+		
+		i {
+			color:#74CAEE;
+			margin-bottom: 7px;
+		}
+		
+		.btn {
+			display:none;
+		}
+	}
+	
+	.btn-mobile {
+		background-color:#F5F5F5;
+		margin-bottom:20px;
+		i {
+			color:#74CAEE;
+			margin-bottom: 0px;
+		}
+		
+	}
+}
+
+@include respond-to(tablet, desktop) {
+	#main-content-altendis {
+		max-width: 940px;
+		padding: 0;
+	}
+	
+	.liste-formations {
+		.span4 {
+			width:300px;
+		}
+	
+		.thumbnail {
+			height: 100px;
+		}
+	}
+	
+	.image-formation {
+		position:inherit;
+		margin-left:0px;
+		float: left;
+		margin-right: 20px;
+	}
+	
+	.list-next-training {
+	    margin-left:25%;
+	}
+	
+	.formation-overview {
+		.icone {
+			width: 110px;
+			float:left;
+			
+			.btn {
+				display:inline-block;
+				background-color:#F5F5F5;
+			}
+		}
+		>p {
+			margin-left: 140px;
+		}
+		
+		.btn-mobile {
+			display:none;
+		}
+		
+		h2,h3 {
+			margin-left:140px;
+		}
+	}
+}

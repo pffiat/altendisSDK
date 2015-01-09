@@ -1,0 +1,154 @@
+.flow-navbar {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	
+	#myNavbar {
+		width:100%;
+		z-index: 1000;
+		margin-top: -1px;
+	}
+		
+	.navbar-top {
+		position: absolute;
+		right: 20px;
+		top: 0px;
+		cursor: pointer;
+		z-index: 15;
+		padding-top: 13px;
+		padding-left: 35px;
+		
+		 a {
+			text-decoration: none;
+		}
+	}
+	
+	.fixed-navbar {
+		position: fixed;
+		top: 0;
+		z-index: 10;
+		left: -1px;
+		bottom: auto;
+	}
+	
+	/* Override twitter bootstrap */
+	.navbar {
+		margin-bottom: 0px;
+		
+		.navbar-inner {
+			-webkit-border-radius: 0px;
+			-moz-border-radius: 0px;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+			border-radius: 0px;
+			border: none;
+			text-align: center;
+			background: white;
+			border-bottom: 5px solid #3A6375;
+			padding:0px;
+			min-height: 50px;
+	
+			.btn-toggle {
+				background:none;
+				border-width:0px;
+				width: auto;
+			}
+			
+			.nav-collapse {
+				display:inherit;
+				position:absolute;
+				background:white;
+				margin-top:50px;
+				width:100%;
+				border-top: 1px solid #EEEEEE;
+				border-bottom: 2px solid #EEEEEE;
+			
+				.nav {
+					width: 100%;
+					text-align: center;
+					margin:0px;
+					font-weight: bold;
+	
+					&>li {
+						display: block;
+						border-bottom:1px solid #EEEEEE;
+						line-height: 30px;
+						
+						
+						/* Not focused not active navbar item */
+						&>a {
+							text-shadow: none;
+							color: #666;
+							padding: 15px 20px;
+							transition: all 500ms;
+							-moz-transition: all 500ms;
+							-webkit-transition: all 500ms;
+							-o-transition: all 500ms;
+							border-bottom: 5px solid transparent;
+							margin-bottom: -5px;
+							
+							&:hover {
+								color: white;
+								background: #2E5A72;
+								border-bottom: 5px solid #3A6375;
+							}
+						}
+					}
+					&>.active>a,
+					&>.active>a:hover,
+					&>.active>a:focus {
+						background: white;
+						cursor: default;
+						border-bottom: 5px solid #3A6375;
+						color: #3D729F;
+						-webkit-box-shadow: none;
+						-moz-box-shadow: none;
+						box-shadow: none;
+					}
+				}
+			}
+		}
+	}	
+	
+	.navbar.affix {
+		position: fixed;
+		top: 0;
+		z-index: 10;
+		width: 100%;
+	}
+}
+
+@include respond-to(desktop, desktop) {
+	.flow-navbar {
+		.navbar {
+			margin-bottom: 0px;
+			
+			.navbar-inner {
+				.btn-toggle {
+					display:none;
+				}
+				
+				.nav-collapse {
+					position:relative;
+					background:white;
+					margin-top:0px;
+					width:auto;
+					border:none;
+				
+					.nav {
+						width: 100%;
+						text-align: center;
+						margin:0px;
+		
+						&>li {
+							float:none;
+							display: inline-block;
+							border:none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

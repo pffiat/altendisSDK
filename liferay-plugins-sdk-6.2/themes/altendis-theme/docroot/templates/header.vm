@@ -1,0 +1,63 @@
+<header id="banner-theme" role="banner">
+	<!-- Top strip -->
+	<div class="header-top-strip">
+		<div class="header-top-strip-content">
+
+			<!-- Excilys -->
+			<div class="header-top-strip-content-left">
+				<img src="$images_folder/altendis/excilys.png" alt="excilys" class="excilys-logo"/>
+			</div>
+
+			<div class="header-top-strip-content-left member-of-excilys">
+				Membre du groupe <font class="hand">Excilys</font>
+			</div>
+
+			<!-- Social -->
+			<div class="header-top-strip-content-right">
+				<!--github-->
+				<iframe src="http://ghbtns.com/github-btn.html?user=excilys&type=follow"
+				allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+				<!-- twitter -->
+				<a href="https://twitter.com/excilys" class="twitter-follow-button" data-lang="en">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				<!--linkedin-->
+				<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+				<script type="IN/CompanyProfile" data-id="236537" data-format="click" data-text="Altendis"></script>
+			</div>
+		</div>
+	</div>
+
+	<!-- Light effect below top strip -->
+	<div class="header-light-effect">
+		<div class="header-hr"></div>
+	</div>
+	
+	<!-- Header main content -->
+	<div class="header-content">
+		<div class="header-bg"></div>
+		<!-- Navbar in document -->
+		<div class="header-bottom-strip"></div>
+		#if ($show_navigation)
+		#if ($has_navigation || $is_signed_in)
+		#parse ("$full_templates_path/navigation.vm")
+		#end
+		#end
+		
+		<a class="$logo_css_class altendis-logo" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+			<img alt="$logo_description" src="$site_logo" />
+		</a>
+
+		<div class="altendis-description" >Partenaire officiel de <font class="hand">Liferay</font> en France</div>
+		<img alt="liferay trainer" class="liferay-trainer" src="$images_folder/altendis/trainer.png" />
+
+		<!-- prochaines formations -->
+		
+		#set ($VOID = $velocityPortletPreferences.setValue('displayStyle', '1'))
+		#set ($VOID = $velocityPortletPreferences.setValue('portletSetupShowBorders', 'false'))
+		#set ($myPortletId = "formationcarousel_WAR_formationcalendarportlet")
+		$theme.runtime($myPortletId, '', $velocityPortletPreferences.toString())
+		#set ($VOID = $velocityPortletPreferences.reset())
+
+		
+	</div>
+</header>

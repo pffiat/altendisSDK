@@ -1,0 +1,15 @@
+#Eclipse
+target/
+bin/
+tmp/
+.settings/
+.classpath
+.project
+
+#Misc
+.DS_Store
+*~
+*.class
+*.jar
+*.war
+*.ear

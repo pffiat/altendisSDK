@@ -1,0 +1,230 @@
+#banner-theme {
+	background: url("/altendis-theme/images/altendis/altendis-banner-right.png") no-repeat scroll right center #184f6c;
+	background-size: auto 100%;
+	
+	.header-bg {
+		position: absolute;
+		opacity: 0.5;
+		width: 100%;
+		height: 100%;
+		background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.5) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0,
+			0, 0.5)), color-stop(48%, rgba(0, 0, 0, 0)),
+			color-stop(100%, rgba(0, 0, 0, 0.5))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.5) 100%);
+		/* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.5) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.5) 100%); /* IE10+ */
+		background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0.0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000',
+			endColorstr='#cc000000', GradientType=1); /* IE6-9 */
+	}
+	
+	.header-top-strip {
+		z-index: 1;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		height: 60px;
+		background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0.6) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0
+			, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0.6)));
+		/* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0.6) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0.6) 100%); /* IE10+ */
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0.6) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000',
+			endColorstr='#99000000', GradientType=0); /* IE6-9 */
+	}
+	
+	.header-hr {
+		width: 100%;
+		height: 1px;
+		background: -moz-linear-gradient(left, rgba(41, 169, 223, 0) 0%,
+			rgba(41, 169, 223, 0.6) 50%, rgba(41, 169, 223, 0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(41,
+			169, 223, 0)), color-stop(50%, rgba(41, 169, 223, 0.6)),
+			color-stop(100%, rgba(41, 169, 223, 0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left, rgba(41, 169, 223, 0) 0%,
+			rgba(41, 169, 223, 0.6) 50%, rgba(41, 169, 223, 0) 100%);
+		/* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left, rgba(41, 169, 223, 0) 0%,
+			rgba(41, 169, 223, 0.6) 50%, rgba(41, 169, 223, 0) 100%);
+		/* Opera 11.10+ */
+		background: -ms-linear-gradient(left, rgba(41, 169, 223, 0) 0%,
+			rgba(41, 169, 223, 0.6) 50%, rgba(41, 169, 223, 0) 100%); /* IE10+ */
+		background: linear-gradient(to right, rgba(41, 169, 223, 0) 0%,
+			rgba(41, 169, 223, 0.6) 50%, rgba(41, 169, 223, 0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0029a9df',
+			endColorstr='#0029a9df', GradientType=1); /* IE6-9 */
+	}
+
+	.header-bottom-strip {
+		position: absolute;
+		width: 100%;
+		bottom: 55px;
+		height: 10px;
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+	
+	.member-of-excilys {
+		display:none;
+	}
+	
+	.header-top-strip-content {
+		margin: 0px auto;
+		max-width: 1170px;
+		width: 100%;
+		text-align: right;
+		color: white;
+		padding-top: 0.8em;
+	}
+	
+	.header-top-strip-content-right {
+		float: right;
+		padding-top: 0.2em;
+	}
+	
+	.header-top-strip-content-left {
+		float: left;
+		line-height: 1.7;
+		margin-left: 0.5em;
+		color: white;
+	}
+	
+	.excilys-logo {
+		width: 46px;
+	}
+	
+	.altendis-logo {
+		position: absolute;
+		left: 10%;
+		top: 160px;
+		
+		> img {
+			max-height:150px;
+		}
+	}
+	
+	.altendis-description {
+		color: #EFEFEF;
+		line-height: 1.25;
+		width: auto;
+		display: inline;
+		position: absolute;
+		bottom: 150px;
+		font-size: 25px;
+		left: 10%;
+	}
+	
+	.header-content {
+		height: 500px;
+		position: relative;
+	}
+	
+	.header-light-effect {
+		position: relative;
+		top: 60px;
+		width: 100%;
+	}
+	
+
+	
+	.header-content .centered {
+			position: relative;
+			margin: 0px auto;
+			padding-top: 125px;
+			max-width: 1170px;
+			color: white;
+			text-align: center;
+			
+			.text {
+				position: relative;
+				text-align: left;
+				left: 280px;
+			}
+	}
+		
+	.liferay-trainer {
+		position: absolute;
+		right: 20px;
+		bottom: 80px;
+	}
+	
+	.next-formation {
+		position: absolute;
+		top: 100px;
+		right: 20px;
+		text-align: right;
+		
+		a {
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+			line-height: 40px;
+		}
+	}
+	
+}
+@include respond-to(tablet,desktop) {
+	#banner-theme {
+		.header-bottom-strip {
+			bottom: 55px;
+		}	
+		.member-of-excilys {
+			display:inline-block;
+		}
+		
+		.altendis-logo {
+			position: absolute;
+			left: 20%;
+			top: 140px;
+			
+			> img {
+				max-height:none;
+			}
+		}
+		
+		.next-formation {
+			right: 50px;
+			
+			a {
+				font-size: x-large;
+			}
+		}
+	
+		.altendis-description {
+		    bottom: 110px;
+		    left: 23%;
+		}
+		
+		.liferay-trainer {
+			position: absolute;
+			right: 10px;
+			bottom: 75px;
+		}
+	}
+}
+
+@include respond-to(desktop, desktop) {
+	#banner-theme {
+		.header-bottom-strip {
+			bottom: 65px;
+		}	
+		.altendis-description {
+			bottom:140px;
+			left: 38%;
+		}
+	}
+}
