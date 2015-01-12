@@ -4,7 +4,7 @@
 <display>
 	
 	<category name="category.content">
-		<portlet id="formation-banner"></portlet>
+		<portlet id="formation-list"></portlet>
 		<portlet id="formation-carousel"></portlet>
 	</category>
-</display>
+</display> 

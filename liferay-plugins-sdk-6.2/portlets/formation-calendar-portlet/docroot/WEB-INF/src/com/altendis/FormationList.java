@@ -21,7 +21,7 @@ import com.liferay.util.bridges.mvc.MVCPortlet;
 /**
  * Portlet implementation class FormationBanner
  */
-public class FormationBanner extends MVCPortlet {
+public class FormationList extends MVCPortlet {
 
 	@Override
 	public void doView(RenderRequest renderRequest, RenderResponse renderResponse) throws IOException, PortletException {

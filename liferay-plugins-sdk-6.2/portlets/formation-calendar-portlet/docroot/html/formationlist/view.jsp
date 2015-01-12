@@ -10,7 +10,7 @@
 	<p class="text-center text-muted">Aucune prévue pour le moment !</p>
 </c:if>
 <c:forEach items="${requestScope.bookings}" var="booking">
-<ul class="list-next-training">
+<ul id="training-list" class="list-next-training">
 	<jsp:useBean id="start" class="java.util.Date" />
 	<jsp:setProperty name="start" property="time" value="${booking.startTime}" />
 	<jsp:useBean id="end" class="java.util.Date" />
@@ -18,11 +18,12 @@
 	
 	<c:choose>
 	<c:when test="${booking.startTime+25*60*60*1000 gt booking.endTime }">
-	<li><fmt:formatDate value="${end }" dateStyle="long" /> : ${booking.titleCurrentValue} (Paris)</li>
+	<c:set var="date"><fmt:formatDate value="${end }" dateStyle="long" /></c:set>
 	</c:when>
 	<c:otherwise>
-	<li><fmt:formatDate value="${start }" pattern="d" /> au <fmt:formatDate value="${end }" dateStyle="long" /> : ${booking.titleCurrentValue} (Paris)</li>
+	<c:set var="date"><fmt:formatDate value="${start }" pattern="d" /> au <fmt:formatDate value="${end }" dateStyle="long" /></c:set>
 	</c:otherwise>
 	</c:choose>
+	<li>${date} : ${booking.titleCurrentValue} - Paris (<a href="#training-list">s'inscrire</a>)</li>
 </ul>
 </c:forEach>
