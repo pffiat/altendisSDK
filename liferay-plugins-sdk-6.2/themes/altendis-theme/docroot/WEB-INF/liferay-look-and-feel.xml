@@ -6,12 +6,6 @@
 		<version>6.2.1+</version>
 	</compatibility>
 	<theme id="altendis" name="Altendis">	
-		<settings>
-				<setting configurable="true" key="show-list-formation" options="true,false" type="select" value="true" />
-				<setting configurable="true" key="show-navigation" options="true,false" type="select" value="true" />
-				<setting configurable="true" key="portlet-setup-show-borders-default" options="true,false" type="select" value="true" />
-				<setting configurable="true" key="show-logo" options="true,false" type="select" value="false" />
-		</settings>
 	</theme>
 </look-and-feel>
 

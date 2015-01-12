@@ -37,10 +37,8 @@
 		<div class="header-bg"></div>
 		<!-- Navbar in document -->
 		<div class="header-bottom-strip"></div>
-		#if ($show_navigation)
 		#if ($has_navigation || $is_signed_in)
 		#parse ("$full_templates_path/navigation.vm")
-		#end
 		#end
 		
 		<a class="$logo_css_class altendis-logo" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
