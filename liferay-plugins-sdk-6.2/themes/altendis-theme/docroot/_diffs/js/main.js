@@ -12,6 +12,7 @@ AUI().ready(
 				'gallery-affix',
 				'anim',
 				'aui-node',
+				'aui-modal',
 				function(Y) {
 				
 				if(Y.one(".flow-navbar") !== null) {
@@ -59,7 +60,24 @@ AUI().ready(
 							}
 						}
 						).run();
-					});
+				});
+				
+				//popup Mentions légales
+				var mentions = new Y.Modal({
+			        modal: true,
+			        visible:false,
+					centered: true,
+					zIndex: 1100,
+			        headerContent: '<h3>Mentions légales</h3>',
+			        bodyContent: Y.one("#mentionsLegales")
+				}).render();
+				
+				Y.one("#aboutModal").on(
+					'click', 
+					function(event) {
+						event.preventDefault();
+						mentions.show();
+				});
 			});
 	}
 );

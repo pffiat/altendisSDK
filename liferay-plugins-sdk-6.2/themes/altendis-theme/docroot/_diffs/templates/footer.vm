@@ -34,20 +34,23 @@
 		<div class="phone-label">Fax</div>
 		<span class="phone-text"><i class="fa fa-fax"></i>&nbsp;&nbsp;&nbsp;+33 (0) 1 41 24 43 21</span><br />
 
-		<br />
-
-		<div class="footer-text">
-			<a href="http://www.excilys.com/">Groupe Excilys</a> -
-			<a href="http://blog.excilys.com/">Blog</a> -
-			<a href="http://labs.excilys.com/">Labs</a>
-		</div>
 	</div>
 
 	<div class="footer-copyright">
-		<a href="#aboutModal" role="button" data-toggle="modal">Mentions Légales</a> - ©2015 Altendis 2005-2015<br />
-		Altendis SARL au capital de 50 000 € RCS de Créteil 480 397 069 00039 
+		<a id="aboutModal" href="#aboutModal" role="button" data-toggle="modal">Mentions Légales</a> - ©2015 Altendis 2005-2015<br />
+		Altendis SARL au capital de 50 000 € RCS de Créteil 480 397 769
 	</div>
 	
+	<!-- mentions légales -->
+	<div style="display:none;">
+		<div id="mentionsLegales">
+			<p>Le propriétaire et éditeur de site web est la <strong>SARL Altendis</strong> inscrite au RCS de Créteil sous le numéro <strong>XXXX</strong>.
+			<br/>Le capital social est de <strong>50 000 euros</strong>.
+			<br/>Le siège social est situé au <strong>45-47 avenue Carnot - 94230 Cachan</strong>.
+			<br/>Le standard est le <strong>+33 X XX XX XX XX</strong>.<p>
+			<p> Toute réclamation quant au contenu de ce site doit être adressée par voie postale au siège social de la société à l'attention du directeur de la publication <strong>Pascal Simon</strong>.</p>
+		</div>
+	</div>
 	#if ($is_signed_in)
 		<a class="btn btn-mini btn-inverse btn-signin" href="$sign_out_url" id="sign-in" rel="nofollow">$sign_out_text</a>
 	#else
