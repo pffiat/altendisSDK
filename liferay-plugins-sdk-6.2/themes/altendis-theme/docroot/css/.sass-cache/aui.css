@@ -4670,7 +4670,7 @@
     line-height: 1.5em;
     font-size: 0.9em; }
   .aui #wrapper, .aui .main-content-altendis {
-    padding: 2em 0 0 !important; }
+    padding: 2em 0 0; }
   .aui .liste-formations {
     color: #3d729f;
     margin-top: 20px;
@@ -4723,8 +4723,7 @@
       margin-bottom: 0px; }
   @media (min-width: 768px) {
     .aui #wrapper, .aui .main-content-altendis {
-      max-width: 940px !important;
-      padding: 0 !important; }
+      max-width: 940px; }
     .aui .liste-formations .span4 {
       width: 300px; }
     .aui .liste-formations .thumbnail {

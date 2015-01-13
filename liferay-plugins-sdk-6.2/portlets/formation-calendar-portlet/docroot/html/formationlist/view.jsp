@@ -36,7 +36,7 @@ AUI().use('aui-base', 'liferay-portlet-url', function(A) {
             
             var portletURL = Liferay.PortletURL.createRenderURL();
             portletURL.setPortletId("contactmeportlet_WAR_contactmeportlet"); 
-            portletURL.setParameter("trainning", this.getData('training'));
+            portletURL.setParameter("training", this.getData('training'));
             portletURL.setParameter("start", this.getData('start')); 
             portletURL.setParameter("end", this.getData('end'));
             portletURL.setWindowState('pop_up');

@@ -13,6 +13,7 @@
 		<css-class-wrapper>
 			contact-me-portlet-portlet
 		</css-class-wrapper>
+		<add-default-resource>true</add-default-resource>
 	</portlet>
 	<portlet>
 		<portlet-name>display-line-portlet</portlet-name>

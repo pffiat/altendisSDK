@@ -13,4 +13,8 @@ tmp/
 *.jar
 *.war
 *.ear
+
+#Liferay
 build.*.properties
+liferay-plugins-sdk-6.2/portlets/contact-me-portlet/.tern-project
+liferay-plugins-sdk-6.2/portlets/contact-me-portlet/docroot/WEB-INF/classes/*
