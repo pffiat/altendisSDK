@@ -71,6 +71,8 @@ li {
 
 .list-next-training {
     font-weight: bold;
+    
+    
 }
 
 .formation-overview {
@@ -79,7 +81,7 @@ li {
 	}
 	
 	.icone {
-		margin: 10px 20px 30px 10px;
+		margin: 0px 20px 0px 10px;
 		text-align: center;
 		
 		i {
@@ -127,10 +129,14 @@ li {
 	}
 	
 	.list-next-training {
-	    margin-left:25%;
-	}
+	    button {
+	    	width: 100%;
+	    }
+	}	
 	
 	.formation-overview {
+		margin-bottom:15px;
+	
 		.icone {
 			width: 110px;
 			float:left;
@@ -140,6 +146,7 @@ li {
 				background-color:#F5F5F5;
 			}
 		}
+		
 		>p {
 			margin-left: 140px;
 		}
@@ -148,8 +155,19 @@ li {
 			display:none;
 		}
 		
-		h2,h3 {
-			margin-left:140px;
+		h3 {
+			margin-left: 140px;
 		}
+	}
+}
+
+@include respond-to(desktop, desktop) {
+	.list-next-training {
+	    margin-left:25%;
+	    
+	    button {
+	    	float:right;
+	    	width: auto;
+	    }
 	}
 }

@@ -4708,7 +4708,7 @@
   .aui .formation-overview .btn {
     background: none; }
   .aui .formation-overview .icone {
-    margin: 10px 20px 30px 10px;
+    margin: 0px 20px 0px 10px;
     text-align: center; }
     .aui .formation-overview .icone i {
       color: #74CAEE;
@@ -4734,20 +4734,28 @@
       margin-left: 0px;
       float: left;
       margin-right: 20px; }
+    .aui .list-next-training button {
+      width: 100%; }
+    .aui .formation-overview {
+      margin-bottom: 15px; }
+      .aui .formation-overview .icone {
+        width: 110px;
+        float: left; }
+        .aui .formation-overview .icone .btn {
+          display: inline-block;
+          background-color: #F5F5F5; }
+      .aui .formation-overview > p {
+        margin-left: 140px; }
+      .aui .formation-overview .btn-mobile {
+        display: none; }
+      .aui .formation-overview h3 {
+        margin-left: 140px; } }
+  @media (min-width: 980px) {
     .aui .list-next-training {
       margin-left: 25%; }
-    .aui .formation-overview .icone {
-      width: 110px;
-      float: left; }
-      .aui .formation-overview .icone .btn {
-        display: inline-block;
-        background-color: #F5F5F5; }
-    .aui .formation-overview > p {
-      margin-left: 140px; }
-    .aui .formation-overview .btn-mobile {
-      display: none; }
-    .aui .formation-overview h2, .aui .formation-overview h3 {
-      margin-left: 140px; } }
+      .aui .list-next-training button {
+        float: right;
+        width: auto; } }
   .aui .footer-theme {
     font-size: 0.9em;
     position: relative;
