@@ -25,7 +25,7 @@ Vous pouvez poser vos questions ou demander une inscription ici:
 
 	<aui:fieldset>
 		<aui:input name="nom" label="Nom:" >
-			<%-- <aui:validator name="required" errorMessage="merci de remplir ce champ"></aui:validator> --%>
+			<aui:validator name="required" errorMessage="merci de remplir ce champ"></aui:validator> 
 			<aui:validator name="custom" errorMessage="simulation-name-syntaxe">
 				function (val, fieldNode, ruleValue) {
 					return /^[\w\s]+$/.test(val);
