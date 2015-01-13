@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.altendis.contact">
+	<author>pif</author>
+	<namespace>Altendis</namespace>
+
+	<entity name="Form" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="formId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="createDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="nom" type="String" />
+		<column name="entreprise" type="String" />
+		<column name="telephone" type="String" />
+		<column name="email" type="String" />
+		<column name="comment" type="String" />
+
+	</entity>
+</service-builder>
