@@ -33,8 +33,10 @@ public class ContactMe extends MVCPortlet {
 		String start = ParamUtil.getString(renderRequest, "start");
 		String end = ParamUtil.getString(renderRequest, "end");
 
-		LOG.info(training + " " + start + " " + end);
+		renderRequest.setAttribute("training", training);
+		renderRequest.setAttribute("startTraining", start);
+		renderRequest.setAttribute("endTraining", end);
+
 		super.doView(renderRequest, renderResponse);
 	}
-
 }

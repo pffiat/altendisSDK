@@ -1,26 +1,11 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
-<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
-<%@ taglib uri="http://liferay.com/tld/security" prefix="liferay-security" %>
 <%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %> 
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
-<%@ taglib uri="http://liferay.com/tld/util" prefix="liferay-util" %>
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
 
-<%@ page import="com.liferay.portal.kernel.template.TemplateHandler" %>
-<%@ page import="com.liferay.portal.kernel.template.TemplateHandlerRegistryUtil" %>
-<%@ page import="com.liferay.portal.kernel.exception.PortalException" %>
-<%@ page import="com.liferay.portal.kernel.exception.SystemException" %>
-<%@ page import="com.liferay.portal.kernel.util.Constants" %>
-<%@ page import="com.liferay.portal.kernel.util.StringPool" %>
-<%@ page import="com.liferay.portal.kernel.dao.search.ResultRow" %>
-<%@ page import="com.liferay.portal.kernel.util.GetterUtil" %>
-<%@ page import="com.liferay.portal.kernel.util.HtmlUtil" %>
-<%@ page import="com.liferay.portal.kernel.util.ParamUtil" %>
-<%@ page import="com.liferay.portal.kernel.util.WebKeys" %>
-<%@ page import="com.liferay.portal.model.Group"%>
-<%@ page import="com.liferay.portal.theme.ThemeDisplay" %>
 <%@ page import="com.liferay.portal.util.PortalUtil" %>
 
 <portlet:defineObjects />
@@ -72,7 +57,25 @@ Vous pouvez poser vos questions ou demander une inscription ici:
  			<aui:validator name="email" errorMessage="Merci de remplir le champ avec une adresse mail correcte."/>		
 		</aui:input>
 		
-		<aui:input style="width:400px; height:100px;" cssClass= "optional" label="commentaire" name="comment" type="textarea" wrap="soft" wrapperCssClass="lfr-textarea-container" >
+		<%--prefill the message if registering to training --%>
+		<c:if test="${not empty training && not empty startTraining && not empty endTraining }">
+			<jsp:useBean id="start" class="java.util.Date" />
+			<jsp:setProperty name="start" property="time" value="${startTraining}" />
+			<jsp:useBean id="end" class="java.util.Date" />
+			<jsp:setProperty name="end" property="time" value="${endTraining}" />	
+			
+			<c:set var="inscription">Je souhaite m'inscrire pour la formation "${training }"</c:set>
+			
+			<c:choose>
+			<c:when test="${startTraining+25*60*60*1000 gt endTraining }">
+			<c:set var="inscription">${inscription } du <fmt:formatDate value="${end }" dateStyle="long" /></c:set>
+			</c:when>
+			<c:otherwise>
+			<c:set var="inscription">${inscription } du <fmt:formatDate value="${start}" pattern="d" /> au <fmt:formatDate value="${end }" dateStyle="long" /></c:set>
+			</c:otherwise>
+			</c:choose>
+		</c:if>
+		<aui:input style="width:400px; height:100px;" cssClass= "optional" label="commentaire" name="comment" type="textarea" wrap="soft" wrapperCssClass="lfr-textarea-container" value="${inscription }" >
  			<aui:validator name="required" errorMessage="merci de remplir ce champ"></aui:validator>			
 		</aui:input>
        
