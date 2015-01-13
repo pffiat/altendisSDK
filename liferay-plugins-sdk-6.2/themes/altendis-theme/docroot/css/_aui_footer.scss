@@ -86,10 +86,11 @@
 	.footer-copyright {
 		font-size: 0.9em;
 		bottom: 0px;
-		padding: 10px;
+		padding: 10px 0;
 		color: #AAA;
 		text-align: center;
 		background: rgba(0, 0, 0, 0.4);
+		width: 100%;
 	}
 
 	.btn-signin {
@@ -103,7 +104,6 @@
 		
 		.footer-copyright {
 			position: absolute;
-			width: 98%;
 		}
 		
 		.btn-signin {
@@ -133,11 +133,7 @@
 }
 
 @include respond-to(desktop, desktop) {
-	.footer-theme {		
-		.footer-copyright {
-			width: 99%;
-		}
-		
+	.footer-theme {				
 		.footer-column {
 			width: 470px;
 			.quote {

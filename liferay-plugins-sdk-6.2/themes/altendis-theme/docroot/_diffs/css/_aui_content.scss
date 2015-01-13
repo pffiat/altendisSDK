@@ -18,8 +18,8 @@ li {
     font-size: 0.9em;
 }
 
-.main-content-altendis {
-	padding: 2em 0 0;
+#wrapper, .main-content-altendis {
+	padding: 2em 0 0 !important;
 }
 
 
@@ -104,9 +104,9 @@ li {
 }
 
 @include respond-to(tablet, desktop) {
-	.main-content-altendis {
-		max-width: 940px;
-		padding: 0;
+	#wrapper, .main-content-altendis  {
+		max-width: 940px !important;
+		padding: 0 !important;
 	}
 	
 	.liste-formations {

@@ -13,3 +13,4 @@ tmp/
 *.jar
 *.war
 *.ear
+build.*.properties
