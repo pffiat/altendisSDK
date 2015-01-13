@@ -52,7 +52,7 @@
 		
 		#set ($VOID = $velocityPortletPreferences.setValue('displayStyle', '1'))
 		#set ($VOID = $velocityPortletPreferences.setValue('portletSetupShowBorders', 'false'))
-		#set ($myPortletId = "formationcarousel_WAR_formationcalendarportlet")
+		#set ($myPortletId = "trainingscarousel_WAR_formationcalendarportlet")
 		$theme.runtime($myPortletId, '', $velocityPortletPreferences.toString())
 		#set ($VOID = $velocityPortletPreferences.reset())
 

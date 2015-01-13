@@ -4,7 +4,8 @@
 <display>
 	
 	<category name="category.content">
-		<portlet id="formation-list"></portlet>
-		<portlet id="formation-carousel"></portlet>
+		<portlet id="trainings-list"></portlet>
+		<portlet id="trainings-carousel"></portlet>
+		<portlet id="all-trainings"></portlet>
 	</category>
 </display> 

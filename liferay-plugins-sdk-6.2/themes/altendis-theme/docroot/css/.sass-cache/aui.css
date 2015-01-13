@@ -4669,8 +4669,10 @@
   .aui li {
     line-height: 1.5em;
     font-size: 0.9em; }
-  .aui #wrapper, .aui .main-content-altendis {
-    padding: 2em 0 0; }
+  .aui .main-content-altendis {
+    padding: 2em 0 0;
+    margin-left: auto;
+    margin-right: auto; }
   .aui .liste-formations {
     color: #3d729f;
     margin-top: 20px;
@@ -4705,6 +4707,12 @@
     margin-left: -76px; }
   .aui .list-next-training {
     font-weight: bold; }
+  .aui .inline-list {
+    font-weight: bold;
+    list-style-type: square; }
+    .aui .inline-list li {
+      float: left;
+      width: 33%; }
   .aui .formation-overview .btn {
     background: none; }
   .aui .formation-overview .icone {
@@ -4722,8 +4730,9 @@
       color: #74CAEE;
       margin-bottom: 0px; }
   @media (min-width: 768px) {
-    .aui #wrapper, .aui .main-content-altendis {
-      max-width: 940px; }
+    .aui .main-content-altendis {
+      max-width: 940px;
+      padding: 1em 0 0; }
     .aui .liste-formations .span4 {
       width: 300px; }
     .aui .liste-formations .thumbnail {

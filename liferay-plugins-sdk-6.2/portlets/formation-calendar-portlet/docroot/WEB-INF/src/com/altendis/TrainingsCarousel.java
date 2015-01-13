@@ -19,9 +19,9 @@ import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 
 /**
- * Portlet implementation class FormationBanner
+ * Portlet implementation class FormationCarousel
  */
-public class FormationList extends MVCPortlet {
+public class TrainingsCarousel extends MVCPortlet {
 
 	@Override
 	public void doView(RenderRequest renderRequest, RenderResponse renderResponse) throws IOException, PortletException {
@@ -57,6 +57,5 @@ public class FormationList extends MVCPortlet {
 		} catch (SystemException e) {
 			e.printStackTrace();
 		}
-
 	}
 }

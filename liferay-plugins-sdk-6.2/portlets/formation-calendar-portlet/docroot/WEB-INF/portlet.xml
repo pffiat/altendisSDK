@@ -3,12 +3,12 @@
 <portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
 	
 	<portlet>
-		<portlet-name>formation-list</portlet-name>
-		<display-name>Formation List</display-name>
-		<portlet-class>com.altendis.FormationList</portlet-class>
+		<portlet-name>trainings-list</portlet-name>
+		<display-name>Prochaines Formations</display-name>
+		<portlet-class>com.altendis.TrainingsList</portlet-class>
 		<init-param>
 			<name>view-template</name>
-			<value>/html/formationlist/view.jsp</value>
+			<value>/html/trainingslist/view.jsp</value>
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>
@@ -16,8 +16,8 @@
 			<portlet-mode>view</portlet-mode>
 		</supports>
 		<portlet-info>
-			<title>Formation List</title>
-			<short-title>Formation List</short-title>
+			<title>Prochaines Formations</title>
+			<short-title>Liste des prochaines formations</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>
@@ -34,12 +34,12 @@
 		</security-role-ref>
 	</portlet>
 	<portlet>
-		<portlet-name>formation-carousel</portlet-name>
-		<display-name>Formation Carousel</display-name>
-		<portlet-class>com.altendis.FormationCarousel</portlet-class>
+		<portlet-name>trainings-carousel</portlet-name>
+		<display-name>Trainings Carousel</display-name>
+		<portlet-class>com.altendis.TrainingsCarousel</portlet-class>
 		<init-param>
 			<name>view-template</name>
-			<value>/html/formationcarousel/view.jsp</value>
+			<value>/html/trainingscarousel/view.jsp</value>
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>
@@ -47,8 +47,39 @@
 			<portlet-mode>view</portlet-mode>
 		</supports>
 		<portlet-info>
-			<title>Formation Carousel</title>
-			<short-title>Formation Carousel</short-title>
+			<title>Prochaines Formations Carousel</title>
+			<short-title>Prochaines Formations Carousel</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>all-trainings</portlet-name>
+		<display-name>Toutes Les Formations</display-name>
+		<portlet-class>com.altendis.AllTrainings</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/alltrainings/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Toutes Les Formations</title>
+			<short-title>Toutes Les Formations Disponibles</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>

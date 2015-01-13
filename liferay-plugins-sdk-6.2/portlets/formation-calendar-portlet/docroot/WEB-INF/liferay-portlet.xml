@@ -4,24 +4,33 @@
 <liferay-portlet-app>
 	
 	<portlet>
-		<portlet-name>formation-list</portlet-name> 
+		<portlet-name>trainings-list</portlet-name> 
 		<icon>/icon.png</icon>
 		<header-portlet-css>/css/main.css</header-portlet-css>
 		<footer-portlet-javascript>
 			/js/main.js
 		</footer-portlet-javascript>
-		<css-class-wrapper>formation-list-portlet</css-class-wrapper>
+		<css-class-wrapper>trainings-list-portlet</css-class-wrapper>
 	</portlet>
 	<portlet>
-		<portlet-name>formation-carousel</portlet-name>
+		<portlet-name>trainings-carousel</portlet-name>
 		<icon>/icon.png</icon>
 		<header-portlet-css>/css/main.css</header-portlet-css>
 		<footer-portlet-javascript>
 			/js/main.js
 		</footer-portlet-javascript>
 		<css-class-wrapper>
-			formation-carousel-portlet
+			trainings-carousel-portlet
 		</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>all-formations</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>all-trainings-portlet</css-class-wrapper>
 	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>
