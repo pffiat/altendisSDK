@@ -21,7 +21,7 @@
 		<!-- Other fields -->
 
 		<column name="nom" type="String" />
-		<column name="entreprise" type="String" />
+		<column name="prenom" type="String" />
 		<column name="telephone" type="String" />
 		<column name="email" type="String" />
 		<column name="comment" type="String" />

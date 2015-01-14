@@ -11,7 +11,7 @@
 		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 		<property name="createDate" type="org.hibernate.type.TimestampType" />
 		<property name="nom" type="com.liferay.portal.dao.orm.hibernate.StringType" />
-		<property name="entreprise" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="prenom" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="telephone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="comment" type="com.liferay.portal.dao.orm.hibernate.StringType" column="comment_" />

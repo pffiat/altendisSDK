@@ -34,7 +34,7 @@ public class FormSoap implements Serializable {
 		soapModel.setGroupId(model.getGroupId());
 		soapModel.setCreateDate(model.getCreateDate());
 		soapModel.setNom(model.getNom());
-		soapModel.setEntreprise(model.getEntreprise());
+		soapModel.setPrenom(model.getPrenom());
 		soapModel.setTelephone(model.getTelephone());
 		soapModel.setEmail(model.getEmail());
 		soapModel.setComment(model.getComment());
@@ -122,12 +122,12 @@ public class FormSoap implements Serializable {
 		_nom = nom;
 	}
 
-	public String getEntreprise() {
-		return _entreprise;
+	public String getPrenom() {
+		return _prenom;
 	}
 
-	public void setEntreprise(String entreprise) {
-		_entreprise = entreprise;
+	public void setPrenom(String prenom) {
+		_prenom = prenom;
 	}
 
 	public String getTelephone() {
@@ -158,7 +158,7 @@ public class FormSoap implements Serializable {
 	private long _groupId;
 	private Date _createDate;
 	private String _nom;
-	private String _entreprise;
+	private String _prenom;
 	private String _telephone;
 	private String _email;
 	private String _comment;

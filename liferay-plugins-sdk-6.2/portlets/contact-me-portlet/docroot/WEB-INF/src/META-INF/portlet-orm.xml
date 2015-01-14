@@ -15,7 +15,7 @@
 				<temporal>TIMESTAMP</temporal>
 			</basic>
 			<basic name="nom" />
-			<basic name="entreprise" />
+			<basic name="prenom" />
 			<basic name="telephone" />
 			<basic name="email" />
 			<basic name="comment">

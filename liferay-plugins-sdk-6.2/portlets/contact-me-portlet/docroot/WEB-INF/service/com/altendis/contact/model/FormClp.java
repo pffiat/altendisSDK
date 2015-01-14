@@ -77,7 +77,7 @@ public class FormClp extends BaseModelImpl<Form> implements Form {
 		attributes.put("groupId", getGroupId());
 		attributes.put("createDate", getCreateDate());
 		attributes.put("nom", getNom());
-		attributes.put("entreprise", getEntreprise());
+		attributes.put("prenom", getPrenom());
 		attributes.put("telephone", getTelephone());
 		attributes.put("email", getEmail());
 		attributes.put("comment", getComment());
@@ -111,10 +111,10 @@ public class FormClp extends BaseModelImpl<Form> implements Form {
 			setNom(nom);
 		}
 
-		String entreprise = (String)attributes.get("entreprise");
+		String prenom = (String)attributes.get("prenom");
 
-		if (entreprise != null) {
-			setEntreprise(entreprise);
+		if (prenom != null) {
+			setPrenom(prenom);
 		}
 
 		String telephone = (String)attributes.get("telephone");
@@ -229,21 +229,21 @@ public class FormClp extends BaseModelImpl<Form> implements Form {
 	}
 
 	@Override
-	public String getEntreprise() {
-		return _entreprise;
+	public String getPrenom() {
+		return _prenom;
 	}
 
 	@Override
-	public void setEntreprise(String entreprise) {
-		_entreprise = entreprise;
+	public void setPrenom(String prenom) {
+		_prenom = prenom;
 
 		if (_formRemoteModel != null) {
 			try {
 				Class<?> clazz = _formRemoteModel.getClass();
 
-				Method method = clazz.getMethod("setEntreprise", String.class);
+				Method method = clazz.getMethod("setPrenom", String.class);
 
-				method.invoke(_formRemoteModel, entreprise);
+				method.invoke(_formRemoteModel, prenom);
 			}
 			catch (Exception e) {
 				throw new UnsupportedOperationException(e);
@@ -393,7 +393,7 @@ public class FormClp extends BaseModelImpl<Form> implements Form {
 		clone.setGroupId(getGroupId());
 		clone.setCreateDate(getCreateDate());
 		clone.setNom(getNom());
-		clone.setEntreprise(getEntreprise());
+		clone.setPrenom(getPrenom());
 		clone.setTelephone(getTelephone());
 		clone.setEmail(getEmail());
 		clone.setComment(getComment());
@@ -455,8 +455,8 @@ public class FormClp extends BaseModelImpl<Form> implements Form {
 		sb.append(getCreateDate());
 		sb.append(", nom=");
 		sb.append(getNom());
-		sb.append(", entreprise=");
-		sb.append(getEntreprise());
+		sb.append(", prenom=");
+		sb.append(getPrenom());
 		sb.append(", telephone=");
 		sb.append(getTelephone());
 		sb.append(", email=");
@@ -493,8 +493,8 @@ public class FormClp extends BaseModelImpl<Form> implements Form {
 		sb.append(getNom());
 		sb.append("]]></column-value></column>");
 		sb.append(
-			"<column><column-name>entreprise</column-name><column-value><![CDATA[");
-		sb.append(getEntreprise());
+			"<column><column-name>prenom</column-name><column-value><![CDATA[");
+		sb.append(getPrenom());
 		sb.append("]]></column-value></column>");
 		sb.append(
 			"<column><column-name>telephone</column-name><column-value><![CDATA[");
@@ -518,7 +518,7 @@ public class FormClp extends BaseModelImpl<Form> implements Form {
 	private long _groupId;
 	private Date _createDate;
 	private String _nom;
-	private String _entreprise;
+	private String _prenom;
 	private String _telephone;
 	private String _email;
 	private String _comment;

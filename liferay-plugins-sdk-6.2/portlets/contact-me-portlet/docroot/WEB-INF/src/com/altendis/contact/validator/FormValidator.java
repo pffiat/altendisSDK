@@ -7,16 +7,16 @@ public class FormValidator {
 
 	public static boolean validateForm(Form form) {
 
-		if ( Validator.isNull(form.getNom())) {
+		if (Validator.isNull(form.getNom())) {
 			return false;
 		}
-		if ( Validator.isNull(form.getEntreprise())) { 
+		if (Validator.isNull(form.getPrenom())) {
 			return false;
 		}
-		if ( ! Validator.isEmailAddress(form.getEmail())) {
+		if (!Validator.isEmailAddress(form.getEmail())) {
 			return false;
 		}
-		if ( Validator.isNull(form.getComment())) {
+		if (Validator.isNull(form.getComment())) {
 			return false;
 		}
 		return true;

@@ -37,60 +37,69 @@ import com.liferay.portal.kernel.util.ParamUtil;
  * The implementation of the form local service.
  *
  * <p>
- * All custom service methods should be put in this class. Whenever methods are added, rerun ServiceBuilder to copy their definitions into the {@link com.altendis.contact.service.FormLocalService} interface.
+ * All custom service methods should be put in this class. Whenever methods are
+ * added, rerun ServiceBuilder to copy their definitions into the
+ * {@link com.altendis.contact.service.FormLocalService} interface.
  *
  * <p>
- * This is a local service. Methods of this service will not have security checks based on the propagated JAAS credentials because this service can only be accessed from within the same VM.
+ * This is a local service. Methods of this service will not have security
+ * checks based on the propagated JAAS credentials because this service can only
+ * be accessed from within the same VM.
  * </p>
  *
  * @author pif
  * @see com.altendis.contact.service.base.FormLocalServiceBaseImpl
  * @see com.altendis.contact.service.FormLocalServiceUtil
  */
-public class FormLocalServiceImpl extends FormLocalServiceBaseImpl{
+public class FormLocalServiceImpl extends FormLocalServiceBaseImpl {
 
 	private static final Log LOG = LogFactoryUtil.getLog(FormLocalServiceImpl.class);
-	
+	private static final String EMAIL_SRC = "pf.fiat@excilys.com";
+	private static final String EMAIL_SRC_NAME = "Altendis.fr";
+	private static final String EMAIL_DEST = "pffiat@excilys.com";
+	private static final String EMAIL_DEST_NAME = "Pascal Simon";
+	private static final String EMAIL_TITLE = "Demande formation Liferay (email automatique)";
+
 	/*
 	 * NOTE FOR DEVELOPERS:
-	 *
-	 * Never reference this interface directly. Always use {@link com.altendis.contact.service.FormLocalServiceUtil} to access the form local service.
+	 * 
+	 * Never reference this interface directly. Always use {@link
+	 * com.altendis.contact.service.FormLocalServiceUtil} to access the form
+	 * local service.
 	 */
-	
+
 	public void addFormFromRequest(ActionRequest request) throws SystemException {
-		
-		
+
 		final long primaryKey = CounterLocalServiceUtil.increment(Form.class.getName());
 		LOG.debug("pK done");
 		Form form = formPersistence.create(primaryKey);
 		form.setNom(ParamUtil.getString(request, "nom"));
-		form.setEntreprise(ParamUtil.getString(request, "entreprise"));
+		form.setPrenom(ParamUtil.getString(request, "prenom"));
 		form.setTelephone(ParamUtil.getString(request, "telephone"));
 		form.setEmail(ParamUtil.getString(request, "email"));
 		form.setComment(ParamUtil.getString(request, "comment"));
-		form.setCreateDate( Calendar.getInstance().getTime());
-		
+		form.setCreateDate(Calendar.getInstance().getTime());
+
 		LOG.debug("form fill");
-		
-		if(FormValidator.validateForm(form)){
+
+		if (FormValidator.validateForm(form)) {
 			try {
-				sendEmail("pf.fiat@excilys.com", "Altendis.fr", "pffiat@excilys.com", "Pascal Simon", "Demande formation Liferay (email automatique).", subject(form));
+				sendEmail(EMAIL_SRC, EMAIL_SRC_NAME, EMAIL_DEST, EMAIL_DEST_NAME, EMAIL_TITLE, subject(form));
 			} catch (UnsupportedEncodingException e) {
 				e.printStackTrace();
 			}
-	        SessionMessages.add(request, "success");
+			SessionMessages.add(request, "success");
 			formPersistence.update(form);
 			LOG.debug("success");
 		} else {
-	        SessionErrors.add(request, "error");
+			SessionErrors.add(request, "error");
 			LOG.debug("error");
 		}
 	}
-	
 
-	
-	private void sendEmail(String fromAddress, String fromName, String toAddress, String toName, String subject, String body) throws UnsupportedEncodingException {
-	
+	private void sendEmail(String fromAddress, String fromName, String toAddress, String toName, String subject, String body)
+			throws UnsupportedEncodingException {
+
 		InternetAddress from = new InternetAddress(fromAddress, fromName);
 		InternetAddress to = new InternetAddress(toAddress, toName);
 
@@ -98,15 +107,12 @@ public class FormLocalServiceImpl extends FormLocalServiceBaseImpl{
 
 		MailServiceUtil.sendEmail(mailMessage);
 	}
-	
+
 	private String subject(Form form) {
-		
-		return new StringBuilder("nom: ").append(form.getNom())
-		.append("<br /> entreprise: ").append(form.getEntreprise())
-		
-		.append("<br /> email: ").append(form.getEmail())
-		.append("<br /> téléphone :").append(form.getTelephone())
-		.append("<br /> <br /> demande: ").append(form.getComment())
-		.toString();
+
+		return new StringBuilder("nom: ").append(form.getNom()).append("<br /> entreprise: ").append(form.getPrenom())
+
+		.append("<br /> email: ").append(form.getEmail()).append("<br /> téléphone :").append(form.getTelephone()).append("<br /> <br /> demande: ")
+				.append(form.getComment()).toString();
 	}
 }

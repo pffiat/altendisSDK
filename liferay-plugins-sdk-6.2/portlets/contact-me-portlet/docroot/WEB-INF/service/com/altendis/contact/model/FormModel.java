@@ -117,19 +117,19 @@ public interface FormModel extends BaseModel<Form> {
 	public void setNom(String nom);
 
 	/**
-	 * Returns the entreprise of this form.
+	 * Returns the prenom of this form.
 	 *
-	 * @return the entreprise of this form
+	 * @return the prenom of this form
 	 */
 	@AutoEscape
-	public String getEntreprise();
+	public String getPrenom();
 
 	/**
-	 * Sets the entreprise of this form.
+	 * Sets the prenom of this form.
 	 *
-	 * @param entreprise the entreprise of this form
+	 * @param prenom the prenom of this form
 	 */
-	public void setEntreprise(String entreprise);
+	public void setPrenom(String prenom);
 
 	/**
 	 * Returns the telephone of this form.

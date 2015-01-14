@@ -319,7 +319,7 @@ public class FormPersistenceImpl extends BasePersistenceImpl<Form>
 		formImpl.setGroupId(form.getGroupId());
 		formImpl.setCreateDate(form.getCreateDate());
 		formImpl.setNom(form.getNom());
-		formImpl.setEntreprise(form.getEntreprise());
+		formImpl.setPrenom(form.getPrenom());
 		formImpl.setTelephone(form.getTelephone());
 		formImpl.setEmail(form.getEmail());
 		formImpl.setComment(form.getComment());

@@ -53,7 +53,7 @@ public class FormWrapper implements Form, ModelWrapper<Form> {
 		attributes.put("groupId", getGroupId());
 		attributes.put("createDate", getCreateDate());
 		attributes.put("nom", getNom());
-		attributes.put("entreprise", getEntreprise());
+		attributes.put("prenom", getPrenom());
 		attributes.put("telephone", getTelephone());
 		attributes.put("email", getEmail());
 		attributes.put("comment", getComment());
@@ -87,10 +87,10 @@ public class FormWrapper implements Form, ModelWrapper<Form> {
 			setNom(nom);
 		}
 
-		String entreprise = (String)attributes.get("entreprise");
+		String prenom = (String)attributes.get("prenom");
 
-		if (entreprise != null) {
-			setEntreprise(entreprise);
+		if (prenom != null) {
+			setPrenom(prenom);
 		}
 
 		String telephone = (String)attributes.get("telephone");
@@ -213,23 +213,23 @@ public class FormWrapper implements Form, ModelWrapper<Form> {
 	}
 
 	/**
-	* Returns the entreprise of this form.
+	* Returns the prenom of this form.
 	*
-	* @return the entreprise of this form
+	* @return the prenom of this form
 	*/
 	@Override
-	public java.lang.String getEntreprise() {
-		return _form.getEntreprise();
+	public java.lang.String getPrenom() {
+		return _form.getPrenom();
 	}
 
 	/**
-	* Sets the entreprise of this form.
+	* Sets the prenom of this form.
 	*
-	* @param entreprise the entreprise of this form
+	* @param prenom the prenom of this form
 	*/
 	@Override
-	public void setEntreprise(java.lang.String entreprise) {
-		_form.setEntreprise(entreprise);
+	public void setPrenom(java.lang.String prenom) {
+		_form.setPrenom(prenom);
 	}
 
 	/**
@@ -356,7 +356,7 @@ public class FormWrapper implements Form, ModelWrapper<Form> {
 	}
 
 	@Override
-	public int compareTo(Form form) {
+	public int compareTo(com.altendis.contact.model.Form form) {
 		return _form.compareTo(form);
 	}
 
@@ -366,17 +366,17 @@ public class FormWrapper implements Form, ModelWrapper<Form> {
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<Form> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.altendis.contact.model.Form> toCacheModel() {
 		return _form.toCacheModel();
 	}
 
 	@Override
-	public Form toEscapedModel() {
+	public com.altendis.contact.model.Form toEscapedModel() {
 		return new FormWrapper(_form.toEscapedModel());
 	}
 
 	@Override
-	public Form toUnescapedModel() {
+	public com.altendis.contact.model.Form toUnescapedModel() {
 		return new FormWrapper(_form.toUnescapedModel());
 	}
 

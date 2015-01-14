@@ -25,17 +25,17 @@ Vous pouvez poser vos questions ou demander une inscription ici:
 
 	<aui:fieldset>
 		<aui:input name="nom" label="Nom:" >
-			<aui:validator name="required" errorMessage="merci de remplir ce champ"></aui:validator> 
-			<aui:validator name="custom" errorMessage="simulation-name-syntaxe">
+			<aui:validator name="required"></aui:validator> 
+			<aui:validator name="custom" errorMessage="name-syntaxe">
 				function (val, fieldNode, ruleValue) {
 					return /^[\w\s]+$/.test(val);
 				}
 			</aui:validator>
 		</aui:input>
 
-		<aui:input name="entreprise" label="Entreprise:" >
- 			<aui:validator name="required" errorMessage="merci de remplir ce champ"></aui:validator>
-			<aui:validator name="custom" errorMessage="simulation-name-syntaxe">
+		<aui:input name="prenom" label="Prénom:" >
+ 			<aui:validator name="required"></aui:validator>
+			<aui:validator name="custom" errorMessage="name-syntaxe">
 				function (val, fieldNode, ruleValue) {
 					return /^[\w\s]+$/.test(val);
 				}
@@ -43,9 +43,9 @@ Vous pouvez poser vos questions ou demander une inscription ici:
 		</aui:input>
 
 		<aui:input name="telephone" label="Numéro de téléphone:">
- 			<aui:validator name="required" errorMessage="merci de remplir ce champ"></aui:validator>
+ 			<aui:validator name="required"></aui:validator>
 			<aui:validator name="maxLength">16</aui:validator>
-			<aui:validator name="custom" errorMessage="simulation-telephone-syntaxe">
+			<aui:validator name="custom" errorMessage="telephone-syntaxe">
 				function (val, fieldNode, ruleValue) {
 					return /^[\d\s]+$/.test(val);
 				}
@@ -53,8 +53,8 @@ Vous pouvez poser vos questions ou demander une inscription ici:
 		</aui:input>
 
 		<aui:input name="email" label="Adresse email:">
- 			<aui:validator name="required" errorMessage="Merci de remplir ce champ."></aui:validator>
- 			<aui:validator name="email" errorMessage="Merci de remplir le champ avec une adresse mail correcte."/>		
+ 			<aui:validator name="required"></aui:validator>
+ 			<aui:validator name="email"/>		
 		</aui:input>
 		
 		<%--prefill the message if registering to training --%>
@@ -75,11 +75,11 @@ Vous pouvez poser vos questions ou demander une inscription ici:
 			</c:otherwise>
 			</c:choose>
 		</c:if>
-		<aui:input style="width:400px; height:100px;" cssClass= "optional" label="commentaire" name="comment" type="textarea" wrap="soft" wrapperCssClass="lfr-textarea-container" value="${inscription }" >
- 			<aui:validator name="required" errorMessage="merci de remplir ce champ"></aui:validator>			
+		<aui:input style="width:400px; height:100px;" cssClass= "optional" label="Commentaire" name="comment" type="textarea" wrap="soft" wrapperCssClass="lfr-textarea-container" value="${inscription }" >
+ 			<aui:validator name="required" ></aui:validator>			
 		</aui:input>
        
-		<aui:button onClick="" type="submit" value="send"></aui:button>
+		<aui:button type="submit" value="send"></aui:button>
 	</aui:fieldset>
 
 </aui:form>

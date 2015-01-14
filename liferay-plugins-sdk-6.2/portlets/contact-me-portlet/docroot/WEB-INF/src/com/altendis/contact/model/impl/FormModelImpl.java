@@ -62,12 +62,12 @@ public class FormModelImpl extends BaseModelImpl<Form> implements FormModel {
 			{ "groupId", Types.BIGINT },
 			{ "createDate", Types.TIMESTAMP },
 			{ "nom", Types.VARCHAR },
-			{ "entreprise", Types.VARCHAR },
+			{ "prenom", Types.VARCHAR },
 			{ "telephone", Types.VARCHAR },
 			{ "email", Types.VARCHAR },
 			{ "comment_", Types.VARCHAR }
 		};
-	public static final String TABLE_SQL_CREATE = "create table Altendis_Form (formId LONG not null primary key,groupId LONG,createDate DATE null,nom VARCHAR(75) null,entreprise VARCHAR(75) null,telephone VARCHAR(16) null,email VARCHAR(75) null,comment_ STRING null)";
+	public static final String TABLE_SQL_CREATE = "create table Altendis_Form (formId LONG not null primary key,groupId LONG,createDate DATE null,nom VARCHAR(75) null,prenom VARCHAR(75) null,telephone VARCHAR(16) null,email VARCHAR(75) null,comment_ STRING null)";
 	public static final String TABLE_SQL_DROP = "drop table Altendis_Form";
 	public static final String ORDER_BY_JPQL = " ORDER BY form.formId ASC";
 	public static final String ORDER_BY_SQL = " ORDER BY Altendis_Form.formId ASC";
@@ -125,7 +125,7 @@ public class FormModelImpl extends BaseModelImpl<Form> implements FormModel {
 		attributes.put("groupId", getGroupId());
 		attributes.put("createDate", getCreateDate());
 		attributes.put("nom", getNom());
-		attributes.put("entreprise", getEntreprise());
+		attributes.put("prenom", getPrenom());
 		attributes.put("telephone", getTelephone());
 		attributes.put("email", getEmail());
 		attributes.put("comment", getComment());
@@ -159,10 +159,10 @@ public class FormModelImpl extends BaseModelImpl<Form> implements FormModel {
 			setNom(nom);
 		}
 
-		String entreprise = (String)attributes.get("entreprise");
+		String prenom = (String)attributes.get("prenom");
 
-		if (entreprise != null) {
-			setEntreprise(entreprise);
+		if (prenom != null) {
+			setPrenom(prenom);
 		}
 
 		String telephone = (String)attributes.get("telephone");
@@ -230,18 +230,18 @@ public class FormModelImpl extends BaseModelImpl<Form> implements FormModel {
 	}
 
 	@Override
-	public String getEntreprise() {
-		if (_entreprise == null) {
+	public String getPrenom() {
+		if (_prenom == null) {
 			return StringPool.BLANK;
 		}
 		else {
-			return _entreprise;
+			return _prenom;
 		}
 	}
 
 	@Override
-	public void setEntreprise(String entreprise) {
-		_entreprise = entreprise;
+	public void setPrenom(String prenom) {
+		_prenom = prenom;
 	}
 
 	@Override
@@ -320,7 +320,7 @@ public class FormModelImpl extends BaseModelImpl<Form> implements FormModel {
 		formImpl.setGroupId(getGroupId());
 		formImpl.setCreateDate(getCreateDate());
 		formImpl.setNom(getNom());
-		formImpl.setEntreprise(getEntreprise());
+		formImpl.setPrenom(getPrenom());
 		formImpl.setTelephone(getTelephone());
 		formImpl.setEmail(getEmail());
 		formImpl.setComment(getComment());
@@ -401,12 +401,12 @@ public class FormModelImpl extends BaseModelImpl<Form> implements FormModel {
 			formCacheModel.nom = null;
 		}
 
-		formCacheModel.entreprise = getEntreprise();
+		formCacheModel.prenom = getPrenom();
 
-		String entreprise = formCacheModel.entreprise;
+		String prenom = formCacheModel.prenom;
 
-		if ((entreprise != null) && (entreprise.length() == 0)) {
-			formCacheModel.entreprise = null;
+		if ((prenom != null) && (prenom.length() == 0)) {
+			formCacheModel.prenom = null;
 		}
 
 		formCacheModel.telephone = getTelephone();
@@ -448,8 +448,8 @@ public class FormModelImpl extends BaseModelImpl<Form> implements FormModel {
 		sb.append(getCreateDate());
 		sb.append(", nom=");
 		sb.append(getNom());
-		sb.append(", entreprise=");
-		sb.append(getEntreprise());
+		sb.append(", prenom=");
+		sb.append(getPrenom());
 		sb.append(", telephone=");
 		sb.append(getTelephone());
 		sb.append(", email=");
@@ -486,8 +486,8 @@ public class FormModelImpl extends BaseModelImpl<Form> implements FormModel {
 		sb.append(getNom());
 		sb.append("]]></column-value></column>");
 		sb.append(
-			"<column><column-name>entreprise</column-name><column-value><![CDATA[");
-		sb.append(getEntreprise());
+			"<column><column-name>prenom</column-name><column-value><![CDATA[");
+		sb.append(getPrenom());
 		sb.append("]]></column-value></column>");
 		sb.append(
 			"<column><column-name>telephone</column-name><column-value><![CDATA[");
@@ -513,7 +513,7 @@ public class FormModelImpl extends BaseModelImpl<Form> implements FormModel {
 	private long _groupId;
 	private Date _createDate;
 	private String _nom;
-	private String _entreprise;
+	private String _prenom;
 	private String _telephone;
 	private String _email;
 	private String _comment;

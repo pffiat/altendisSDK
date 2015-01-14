@@ -47,8 +47,8 @@ public class FormCacheModel implements CacheModel<Form>, Externalizable {
 		sb.append(createDate);
 		sb.append(", nom=");
 		sb.append(nom);
-		sb.append(", entreprise=");
-		sb.append(entreprise);
+		sb.append(", prenom=");
+		sb.append(prenom);
 		sb.append(", telephone=");
 		sb.append(telephone);
 		sb.append(", email=");
@@ -81,11 +81,11 @@ public class FormCacheModel implements CacheModel<Form>, Externalizable {
 			formImpl.setNom(nom);
 		}
 
-		if (entreprise == null) {
-			formImpl.setEntreprise(StringPool.BLANK);
+		if (prenom == null) {
+			formImpl.setPrenom(StringPool.BLANK);
 		}
 		else {
-			formImpl.setEntreprise(entreprise);
+			formImpl.setPrenom(prenom);
 		}
 
 		if (telephone == null) {
@@ -120,7 +120,7 @@ public class FormCacheModel implements CacheModel<Form>, Externalizable {
 		groupId = objectInput.readLong();
 		createDate = objectInput.readLong();
 		nom = objectInput.readUTF();
-		entreprise = objectInput.readUTF();
+		prenom = objectInput.readUTF();
 		telephone = objectInput.readUTF();
 		email = objectInput.readUTF();
 		comment = objectInput.readUTF();
@@ -140,11 +140,11 @@ public class FormCacheModel implements CacheModel<Form>, Externalizable {
 			objectOutput.writeUTF(nom);
 		}
 
-		if (entreprise == null) {
+		if (prenom == null) {
 			objectOutput.writeUTF(StringPool.BLANK);
 		}
 		else {
-			objectOutput.writeUTF(entreprise);
+			objectOutput.writeUTF(prenom);
 		}
 
 		if (telephone == null) {
@@ -173,7 +173,7 @@ public class FormCacheModel implements CacheModel<Form>, Externalizable {
 	public long groupId;
 	public long createDate;
 	public String nom;
-	public String entreprise;
+	public String prenom;
 	public String telephone;
 	public String email;
 	public String comment;
