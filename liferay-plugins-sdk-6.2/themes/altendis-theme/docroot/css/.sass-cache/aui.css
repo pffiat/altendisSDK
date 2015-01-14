@@ -4464,9 +4464,6 @@
       text-align: right;
       color: white;
       padding-top: 0.8em; }
-    .aui #banner-theme .header-top-strip-content-right {
-      float: right;
-      padding-top: 0.2em; }
     .aui #banner-theme .header-top-strip-content-left {
       float: left;
       line-height: 1.7;
@@ -4477,9 +4474,9 @@
     .aui #banner-theme .altendis-logo {
       position: absolute;
       left: 10%;
-      top: 160px; }
+      top: 190px; }
       .aui #banner-theme .altendis-logo > img {
-        max-height: 150px; }
+        max-height: 100px; }
     .aui #banner-theme .altendis-description {
       color: #EFEFEF;
       line-height: 1.25;
@@ -4487,8 +4484,8 @@
       display: inline;
       position: absolute;
       bottom: 150px;
-      font-size: 25px;
-      left: 10%; }
+      font-size: 20px;
+      left: 5%; }
     .aui #banner-theme .header-content {
       height: 500px;
       position: relative; }
@@ -4496,6 +4493,8 @@
       position: relative;
       top: 60px;
       width: 100%; }
+    .aui #banner-theme .header-top-strip-content-right {
+      display: none; }
     .aui #banner-theme .header-content .centered {
       position: relative;
       margin: 0px auto;
@@ -4510,10 +4509,11 @@
     .aui #banner-theme .liferay-trainer {
       position: absolute;
       right: 20px;
-      bottom: 80px; }
+      bottom: 80px;
+      max-height: 50px; }
     .aui #banner-theme .next-formation {
       position: absolute;
-      top: 100px;
+      top: 60px;
       right: 20px;
       text-align: right; }
       .aui #banner-theme .next-formation a {
@@ -4526,23 +4526,30 @@
       bottom: 55px; }
     .aui #banner-theme .member-of-excilys {
       display: inline-block; }
+    .aui #banner-theme .header-top-strip-content-right {
+      float: right;
+      padding-top: 0.2em;
+      display: inline-block; }
     .aui #banner-theme .altendis-logo {
       position: absolute;
-      left: 20%;
+      left: 15%;
       top: 140px; }
       .aui #banner-theme .altendis-logo > img {
         max-height: none; }
     .aui #banner-theme .next-formation {
+      top: 100px;
       right: 50px; }
       .aui #banner-theme .next-formation a {
         font-size: x-large; }
     .aui #banner-theme .altendis-description {
       bottom: 110px;
-      left: 23%; }
+      left: 19%;
+      font-size: 25px; }
     .aui #banner-theme .liferay-trainer {
       position: absolute;
       right: 10px;
-      bottom: 75px; } }
+      bottom: 75px;
+      max-height: none; } }
   @media (min-width: 980px) {
     .aui #banner-theme .header-bottom-strip {
       bottom: 65px; }
@@ -4565,7 +4572,8 @@
       cursor: pointer;
       z-index: 15;
       padding-top: 13px;
-      padding-left: 35px; }
+      padding-left: 35px;
+      z-index: 1001; }
       .aui .flow-navbar .navbar-top a {
         text-decoration: none; }
     .aui .flow-navbar .fixed-navbar {
@@ -4600,7 +4608,8 @@
           margin-top: 50px;
           width: 100%;
           border-top: 1px solid #EEEEEE;
-          border-bottom: 2px solid #EEEEEE; }
+          border-bottom: 2px solid #EEEEEE;
+          z-index: 1000; }
           .aui .flow-navbar .navbar .navbar-inner .nav-collapse .nav {
             width: 100%;
             text-align: center;
@@ -4678,7 +4687,9 @@
     margin-top: 20px;
     text-align: center; }
     .aui .liste-formations .span4 {
-      width: 95%; }
+      width: 95%;
+      display: inline-block;
+      float: none !important; }
     .aui .liste-formations > li {
       margin-left: 20px !important; }
     .aui .liste-formations .thumbnail {
@@ -4900,11 +4911,10 @@
       .aui .footer-theme .footer-column .quote img {
         display: inline-block; } }
   .aui .modal {
-    border-width: 0 0 0 30px;
-    border-style: inset;
-    border-image: url("/altendis-theme/images/altendis/ring.png") 0 0 0 50 round;
-    border-image-outset: 0 12px;
     background: white; }
+    .aui .modal .close {
+      font-size: 2em;
+      padding: 5px !important; }
   .aui .portal-popup {
     background: white; }
   .aui .modal-formation-bg {
@@ -4942,6 +4952,13 @@
       .aui .modal-formation-bg .modal-formation-content p {
         margin: 0px 0px 20px; }
   @media (min-width: 768px) {
+    .aui .modal {
+      border-width: 0 0 0 30px;
+      border-style: inset;
+      border-image: url("/altendis-theme/images/altendis/ring.png") 0 0 0 50 round;
+      border-image-outset: 0 12px; }
+      .aui .modal .close {
+        padding: 0px !important; }
     .aui .modal-formation-bg {
       padding: 20px 50px;
       /* gradients - second red border, first red border, top white space, blue lines */

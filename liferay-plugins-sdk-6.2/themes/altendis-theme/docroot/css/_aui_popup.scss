@@ -1,9 +1,11 @@
 .modal {
-	border-width: 0 0 0 30px;
-	border-style: inset;
-	border-image: url("/altendis-theme/images/altendis/ring.png") 0 0 0 50 round;
-	border-image-outset: 0 12px;
 	background:white;
+	
+	.close {
+		font-size: 2em;
+		padding: 5px !important;	
+	}
+
 }
 
 .portal-popup {
@@ -61,6 +63,16 @@
 }
 
 @include respond-to(tablet, desktop) {
+	.modal {
+		border-width: 0 0 0 30px;
+		border-style: inset;
+		border-image: url("/altendis-theme/images/altendis/ring.png") 0 0 0 50 round;
+		border-image-outset: 0 12px;
+		.close {
+			padding: 0px !important;	
+		}
+	}
+	
 	.modal-formation-bg {
 		padding:20px 50px;
 		/* gradients - second red border, first red border, top white space, blue lines */

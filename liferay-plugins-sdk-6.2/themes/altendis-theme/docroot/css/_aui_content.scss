@@ -32,6 +32,8 @@ li {
 	
 	.span4 {
 		width: 95%;
+		display: inline-block;
+		float: none !important;
 	}
 	
 	> li {

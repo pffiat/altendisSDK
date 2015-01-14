@@ -17,6 +17,7 @@
 		z-index: 15;
 		padding-top: 13px;
 		padding-left: 35px;
+		z-index:1001;
 		
 		 a {
 			text-decoration: none;
@@ -63,6 +64,7 @@
 				width:100%;
 				border-top: 1px solid #EEEEEE;
 				border-bottom: 2px solid #EEEEEE;
+				z-index:1000;
 			
 				.nav {
 					width: 100%;
