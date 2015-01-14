@@ -4682,29 +4682,34 @@
     padding: 2em 0 0;
     margin-left: auto;
     margin-right: auto; }
-  .aui .liste-formations {
+  .aui .livres {
     color: #3d729f;
     margin-top: 20px;
     text-align: center; }
-    .aui .liste-formations .span4 {
+    .aui .livres .span3 {
       width: 95%;
       display: inline-block;
-      float: none !important; }
-    .aui .liste-formations > li {
-      margin-left: 20px !important; }
-    .aui .liste-formations .thumbnail {
-      color: #3d729f;
-      text-decoration: none;
-      box-shadow: 1px 0px 5px 0px #aaa;
-      padding: 10px 15px 5px;
-      background-color: white;
-      border-width: 0 0 0 30px;
-      border-style: inset;
-      border-image: url("/altendis-theme/images/altendis/ring.png") 0 0 0 50 round;
-      border-image-outset: 0 12px; }
-      .aui .liste-formations .thumbnail:hover {
-        color: white;
-        background: #3D729F; }
+      float: none !important;
+      margin-left: 20px !important;
+      margin-bottom: 20px; }
+      .aui .livres .span3 .livre {
+        display: block;
+        color: #3d729f;
+        line-height: 20px;
+        text-decoration: none;
+        padding: 10px 15px 5px;
+        background-color: white;
+        box-shadow: 1px 0px 5px 0px #aaa;
+        border: 1px solid #DDD;
+        border-radius: 4px;
+        border-width: 0 0 0 30px;
+        border-style: inset;
+        border-image: url("/altendis-theme/images/altendis/ring.png") 0 0 0 50 round;
+        border-image-outset: 0 12px;
+        transition: all 0.2s ease-in-out 0s; }
+        .aui .livres .span3 .livre:hover {
+          color: white;
+          background: #3D729F; }
   .aui .contentPage {
     background-color: #F3F3F3;
     width: 100%;
@@ -4760,10 +4765,10 @@
     .aui .main-content-altendis {
       max-width: 940px;
       padding: 1em 0 0; }
-    .aui .liste-formations .span4 {
-      width: 300px; }
-    .aui .liste-formations .thumbnail {
-      height: 100px; }
+    .aui .liste-formations .span3 {
+      width: 290px; }
+      .aui .liste-formations .span3 .livre {
+        height: 100px; }
     .aui .image-formation {
       position: inherit;
       margin-left: 0px;
