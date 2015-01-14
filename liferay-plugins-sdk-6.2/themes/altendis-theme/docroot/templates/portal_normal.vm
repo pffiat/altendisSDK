@@ -27,7 +27,7 @@ $theme.include($body_top_include)
 #parse ("$full_templates_path/header.vm")
 
 
-<div class="container" id="wrapper">
+<div id="wrapper">
 	<div id="content">
 
 		#if ($selectable)

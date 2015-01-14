@@ -84,6 +84,36 @@ li {
 	}
 }
 
+.ebiz-overview {
+	.btn {
+		background: none;
+	}
+	
+	.icone {
+		margin: 0px 10px 10px 20px;
+		text-align: center;
+		
+		i {
+			color:#74CAEE;
+			margin-bottom: 7px;
+		}
+		
+		.btn {
+			display:none;
+		}
+	}
+	
+	.btn-mobile {
+		background-color:#F5F5F5;
+		margin-bottom:20px;
+		i {
+			color:#74CAEE;
+			margin-bottom: 0px;
+		}
+		
+	}	
+}
+
 
 .formation-overview {
 	.btn {
@@ -143,6 +173,30 @@ li {
 	    	width: 100%;
 	    }
 	}	
+	
+	.ebiz-overview {
+		margin-bottom:15px;
+		margin-left: 30px;
+	
+		.icone {
+			width: 110px;
+			float:right;
+			
+			.btn {
+				margin-top:20px;
+				display:inline-block;
+				background-color:#F5F5F5;
+			}
+		}
+		
+		>p {
+			margin-right: 140px;
+		}
+		
+		.btn-mobile {
+			display:none;
+		}
+	}
 	
 	.formation-overview {
 		margin-bottom:15px;

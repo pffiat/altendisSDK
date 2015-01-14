@@ -4713,6 +4713,22 @@
     .aui .inline-list li {
       float: left;
       width: 33%; }
+  .aui .ebiz-overview .btn {
+    background: none; }
+  .aui .ebiz-overview .icone {
+    margin: 0px 10px 10px 20px;
+    text-align: center; }
+    .aui .ebiz-overview .icone i {
+      color: #74CAEE;
+      margin-bottom: 7px; }
+    .aui .ebiz-overview .icone .btn {
+      display: none; }
+  .aui .ebiz-overview .btn-mobile {
+    background-color: #F5F5F5;
+    margin-bottom: 20px; }
+    .aui .ebiz-overview .btn-mobile i {
+      color: #74CAEE;
+      margin-bottom: 0px; }
   .aui .formation-overview .btn {
     background: none; }
   .aui .formation-overview .icone {
@@ -4744,6 +4760,20 @@
       margin-right: 20px; }
     .aui .list-next-training button {
       width: 100%; }
+    .aui .ebiz-overview {
+      margin-bottom: 15px;
+      margin-left: 30px; }
+      .aui .ebiz-overview .icone {
+        width: 110px;
+        float: right; }
+        .aui .ebiz-overview .icone .btn {
+          margin-top: 20px;
+          display: inline-block;
+          background-color: #F5F5F5; }
+      .aui .ebiz-overview > p {
+        margin-right: 140px; }
+      .aui .ebiz-overview .btn-mobile {
+        display: none; }
     .aui .formation-overview {
       margin-bottom: 15px; }
       .aui .formation-overview .icone {
