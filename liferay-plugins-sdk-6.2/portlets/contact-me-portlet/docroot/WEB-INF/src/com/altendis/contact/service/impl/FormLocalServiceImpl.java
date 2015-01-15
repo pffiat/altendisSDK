@@ -54,9 +54,9 @@ import com.liferay.portal.kernel.util.ParamUtil;
 public class FormLocalServiceImpl extends FormLocalServiceBaseImpl {
 
 	private static final Log LOG = LogFactoryUtil.getLog(FormLocalServiceImpl.class);
-	private static final String EMAIL_SRC = "pf.fiat@excilys.com";
+	private static final String EMAIL_SRC = "noreply@altendis.fr";
 	private static final String EMAIL_SRC_NAME = "Altendis.fr";
-	private static final String EMAIL_DEST = "pffiat@excilys.com";
+	private static final String EMAIL_DEST = "liferay@altendis.fr";
 	private static final String EMAIL_DEST_NAME = "Pascal Simon";
 	private static final String EMAIL_TITLE = "Demande formation Liferay (email automatique)";
 
@@ -110,9 +110,8 @@ public class FormLocalServiceImpl extends FormLocalServiceBaseImpl {
 
 	private String subject(Form form) {
 
-		return new StringBuilder("nom: ").append(form.getNom()).append("<br /> entreprise: ").append(form.getPrenom())
-
-		.append("<br /> email: ").append(form.getEmail()).append("<br /> téléphone :").append(form.getTelephone()).append("<br /> <br /> demande: ")
+		return new StringBuilder("Nom: ").append(form.getNom()).append("<br /> Prenom: ").append(form.getPrenom()).append("<br /> Email: ")
+				.append(form.getEmail()).append("<br /> Telephone: ").append(form.getTelephone()).append("<br /> <br /> Demande: ")
 				.append(form.getComment()).toString();
 	}
 }
