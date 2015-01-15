@@ -4769,6 +4769,8 @@
       width: 290px; }
       .aui .liste-formations .span3 .livre {
         height: 100px; }
+    .aui .text-formation {
+      margin-left: 165px; }
     .aui .image-formation {
       position: inherit;
       margin-left: 0px;
