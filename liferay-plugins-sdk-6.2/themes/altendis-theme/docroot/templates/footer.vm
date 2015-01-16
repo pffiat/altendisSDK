@@ -44,11 +44,12 @@
 	<!-- mentions légales -->
 	<div style="display:none;">
 		<div id="mentionsLegales">
-			<p>Le propriétaire et éditeur de site web est la <strong>SARL Altendis</strong> inscrite au RCS de Créteil sous le numéro <strong>480 397 769</strong>.
+			<p style="text-align:justify">Le propriétaire et éditeur de site web est la <strong>SARL Altendis</strong> inscrite au RCS de Créteil sous le numéro <strong>480 397 769</strong>.
+			<br/>Le numéro d'agréement d'activité de formation est le <strong>11 94 08799 94</strong>.
 			<br/>Le capital social est de <strong>50 000 euros</strong>.
 			<br/>Le siège social est situé au <strong>45-47 avenue Carnot - 94230 Cachan</strong>.
 			<br/>Le standard est le <strong>+33 1 41 24 43 21</strong>.<p>
-			<p> Toute réclamation quant au contenu de ce site doit être adressée par voie postale au siège social de la société à l'attention du directeur de la publication <strong>Pascal Simon</strong>.</p>
+			<p>Toute réclamation quant au contenu de ce site doit être adressée par voie postale au siège social de la société à l'attention du directeur de la publication <strong>Pascal Simon</strong>.</p>
 		</div>
 	</div>
 	#if ($is_signed_in)

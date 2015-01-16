@@ -1,3 +1,7 @@
+#*
+It uses link to match with the ID to scroll to
+*#
+
 <div  class="flow-navbar">
 	<nav id="myNavbar" class="$nav_css_class navbar" role="navigation">
 		<div class="navbar-top"><a class="animate-scroll" href="#banner-theme"><i class="fa fa-angle-double-up"></i> Haut</a></div>
@@ -19,7 +23,7 @@
 							#set ($nav_item_css_class = "selected")
 						#end
 						
-						#set ($tag = $nav_item.getName().replace(" ",""))
+						#set ($tag = $nav_item.getLayout().getFriendlyURL().replace("/","").toLowerCase())
 			
 						<li class="$nav_item_css_class" id="layout_$nav_item.getLayoutId()" $nav_item_attr_selected role="presentation">
 							<a class="animate-scroll" aria-labelledby="layout_$nav_item.getLayoutId()" href="#$tag" $nav_item_attr_has_popup $nav_item.getTarget() role="menuitem">$nav_item.icon() $nav_item.getName()</a>

@@ -7,7 +7,7 @@
 <section class="portlet" id="portlet_$portlet_id">
 	<header class="portlet-topper">
 		<hr/>
-		#set ($tag = $portlet_title.replace(" ",""))
+		#set ($tag = $portlet_title.replace(" ","-").toLowerCase())
 		
 		<h1 class="portlet-title text-center" id="$tag">
 			<span class="portlet-title-text hand">$portlet_title</span>
