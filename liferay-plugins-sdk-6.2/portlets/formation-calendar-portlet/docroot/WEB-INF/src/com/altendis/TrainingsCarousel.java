@@ -1,6 +1,7 @@
 package com.altendis;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -48,6 +49,8 @@ public class TrainingsCarousel extends MVCPortlet {
 
 				List<CalendarBooking> bookings = CalendarBookingLocalServiceUtil.getCalendarBookings(calendarId, new Date().getTime(),
 						cal.getTimeInMillis());
+
+				Collections.sort(bookings, new OrderEventByDate());
 
 				renderRequest.setAttribute("bookings", bookings);
 			}
