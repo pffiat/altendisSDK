@@ -1,3 +1,26 @@
 #*
 This file allows you to override and define new Velocity variables.
 *#
+
+#set ($text_ribbon = $theme.getSetting("text_ribbon_en"))
+#set ($date_begginning_ribbon = $theme.getSetting("date_begginning_ribbon"))
+
+
+
+#set ($date_beginning = $theme.getSetting("date_begginning_ribbon").replace("/", ""))
+#set ($date_ending = $theme.getSetting("date_ending_ribbon").replace("/", ""))
+
+#set ($format=$dateUtil.getISOFormat($date_beginning))
+
+#set ($toDisplayOneLine = false)
+#set ($toDisplayTwoLine = false)
+
+#if ( $format.parse($date_beginning).getTime() < $dateTool.getDate().getTime() && $format.parse($date_ending).getTime() > $dateTool.getDate().getTime() )
+
+		#set ($toDisplayOneLine = true)
+		
+		#if( $language_id == "fr_FR" || $language_id == "fr_BE" || $language_id == "fr_CA" || $language_id == "fr_LU" )
+			#set ($text_ribbon = $theme.getSetting("text_ribbon"))			
+		#end
+		
+#end 

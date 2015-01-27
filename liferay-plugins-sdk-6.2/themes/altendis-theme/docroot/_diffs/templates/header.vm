@@ -8,8 +8,7 @@
 				<img src="$images_folder/altendis/excilys.png" alt="excilys" class="excilys-logo"/>
 			</div>
 
-			<div class="header-top-strip-content-left member-of-excilys">
-				Membre du groupe <font class="hand">Excilys</font>
+			<div class="header-top-strip-content-left member-of-excilys">$languageUtil.get($locale, "groupe_excilys_member")</font>
 			</div>
 
 			<!-- Social -->
@@ -41,11 +40,44 @@
 		#parse ("$full_templates_path/navigation.vm")
 		#end
 		
+		#if ( $toDisplayOneLine)
+			
+			<div id="navigation_container">
+ 
+			<!-- the left side of the fork effect -->
+			   <div class="l-triangle-top"></div>
+			   <div class="l-triangle-bottom"> </div>
+			 
+			<!-- the ribbon body -->
+			 
+			      <div class="rectangle">
+			 
+			<!-- the navigation links -->
+			 
+			   <p id="ribbon">
+			   </p>
+			 
+			<!-- end the ribbon body -->
+			   </div>
+			 
+			<!-- the right side of the fork effect -->
+		         <div class="r-triangle-top"></div>
+		         <div class="r-triangle-bottom"></div>
+			 
+				<div id="textRibbon">
+					<div class="text">$text_ribbon</div>
+				</div>
+			<!-- end container -->
+			</div>
+			
+
+		#end	
+		
 		<a class="$logo_css_class altendis-logo" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
 			<img alt="$logo_description" src="$site_logo" />
 		</a>
 
-		<div class="altendis-description" >Partenaire officiel de <font class="hand">Liferay</font> en France</div>
+		<div class="altendis-description" >$languageUtil.get($locale, "partenaire_liferay")</div>
 		<img alt="liferay trainer" class="liferay-trainer" src="$images_folder/altendis/trainer.png" />
 
 		<!-- prochaines formations -->
@@ -54,6 +86,12 @@
 		#set ($VOID = $velocityPortletPreferences.setValue('portletSetupShowBorders', 'false'))
 		#set ($myPortletId = "trainingscarousel_WAR_formationcalendarportlet")
 		$theme.runtime($myPortletId, '', $velocityPortletPreferences.toString())
+		#set ($VOID = $velocityPortletPreferences.reset())
+		
+		
+		$velocityPortletPreferences.setValue('portletSetupShowBorders', 'false')
+		$theme.runtime("82", '', $velocityPortletPreferences.toString())
+		
 		#set ($VOID = $velocityPortletPreferences.reset())
 
 		
