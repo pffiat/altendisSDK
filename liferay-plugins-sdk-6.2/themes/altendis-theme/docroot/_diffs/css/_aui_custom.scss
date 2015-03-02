@@ -22,11 +22,11 @@ body {
 	font-weight: 300;
 	font-size: 1.4em;
 	line-height: 1.4;
-	background: #EEEEEE;
+	background: $background;
 }
 
 .hand {
-	color: #74caee;
+	color: $colorRibbon;
 }
 
 .text-justify {

@@ -27,7 +27,15 @@ $theme.include($body_top_include)
 #parse ("$full_templates_path/header.vm")
 
 
-<div id="wrapper">
+<div id="wrapper"
+	## so if ribbon should not be displayed , margin-top stay at 0px
+	## because the css push the wrapper 20px bellow in _aui_header.scss @media (max-width: 1600px) { #wrapper { margin-px:10px}}
+	##that's fucking spaggethi :( sorry, please find a better solution
+	#if($toDisplay == false)
+		style="margin-top:0px !important;"
+	#end
+				>
+	
 	<div id="content">
 
 		#if ($selectable)

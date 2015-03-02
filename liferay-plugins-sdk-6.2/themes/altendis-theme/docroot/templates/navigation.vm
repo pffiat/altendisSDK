@@ -4,7 +4,7 @@ It uses link to match with the ID to scroll to
 
 <div  class="flow-navbar">
 	<nav id="myNavbar" class="$nav_css_class navbar" role="navigation">
-		<div class="navbar-top"><a class="animate-scroll" href="#banner-theme"><i class="fa fa-angle-double-up"></i> Haut</a></div>
+		<div class="navbar-top"><a class="animate-scroll" href="#banner-theme"><i class="fa fa-angle-double-up"></i> $languageUtil.get($locale,"top_haut")</a></div>
 		
 		<div class="navbar-inner">				
 			<a type="button" class="btn btn-toggle pull-left" data-toggle="collapse" data-target=".nav-collapse">

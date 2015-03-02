@@ -48,8 +48,8 @@
 		</div>
 	</div>
 	#if ($is_signed_in)
-		<a class="btn btn-mini btn-inverse btn-signin" href="$sign_out_url" id="sign-in" rel="nofollow">$sign_out_text</a>
+		<a rel="nofollow" class="btn btn-mini btn-inverse btn-signin" href="$sign_out_url" id="sign-in" rel="nofollow">$sign_out_text</a>
 	#else
-		<a class="btn btn-mini btn-inverse btn-signin" href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+		<a rel="nofollow" class="btn btn-mini btn-inverse btn-signin" href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
 	#end
 </div>

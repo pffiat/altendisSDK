@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Lesser General Public License as published by the Free
@@ -37,14 +37,10 @@ import com.liferay.portal.kernel.util.ParamUtil;
  * The implementation of the form local service.
  *
  * <p>
- * All custom service methods should be put in this class. Whenever methods are
- * added, rerun ServiceBuilder to copy their definitions into the
- * {@link com.altendis.contact.service.FormLocalService} interface.
+ * All custom service methods should be put in this class. Whenever methods are added, rerun ServiceBuilder to copy their definitions into the {@link com.altendis.contact.service.FormLocalService} interface.
  *
  * <p>
- * This is a local service. Methods of this service will not have security
- * checks based on the propagated JAAS credentials because this service can only
- * be accessed from within the same VM.
+ * This is a local service. Methods of this service will not have security checks based on the propagated JAAS credentials because this service can only be accessed from within the same VM.
  * </p>
  *
  * @author pif
@@ -52,6 +48,11 @@ import com.liferay.portal.kernel.util.ParamUtil;
  * @see com.altendis.contact.service.FormLocalServiceUtil
  */
 public class FormLocalServiceImpl extends FormLocalServiceBaseImpl {
+	/*
+	 * NOTE FOR DEVELOPERS:
+	 *
+	 * Never reference this interface directly. Always use {@link com.altendis.contact.service.FormLocalServiceUtil} to access the form local service.
+	 */
 
 	private static final Log LOG = LogFactoryUtil.getLog(FormLocalServiceImpl.class);
 	private static final String EMAIL_SRC = "noreply@altendis.fr";

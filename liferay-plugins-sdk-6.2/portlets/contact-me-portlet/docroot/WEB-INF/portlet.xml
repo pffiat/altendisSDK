@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 
 <portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
-	
 	<portlet>
 		<portlet-name>contact-me-portlet</portlet-name>
 		<display-name>Contact Me Portlet</display-name>
@@ -15,6 +14,8 @@
 			<mime-type>text/html</mime-type>
 			<portlet-mode>view</portlet-mode>
 		</supports>
+		<supported-locale>en</supported-locale>
+		<supported-locale>fr</supported-locale>
 		<resource-bundle>content.Language</resource-bundle>
 		<portlet-info>
 			<title>Contact Me Portlet</title>
@@ -34,10 +35,9 @@
 			<role-name>user</role-name>
 		</security-role-ref>
 	</portlet>
-	
 	<portlet>
-		<portlet-name>display-line-portlet</portlet-name>
-		<display-name>Display Line Portlet</display-name>
+		<portlet-name>display-line</portlet-name>
+		<display-name>Display Line</display-name>
 		<portlet-class>com.altendis.display.DisplayLine</portlet-class>
 		<init-param>
 			<name>view-template</name>
@@ -49,8 +49,8 @@
 			<portlet-mode>view</portlet-mode>
 		</supports>
 		<portlet-info>
-			<title>Display Line Portlet</title>
-			<short-title>Display Line Portlet</short-title>
+			<title>Display Line</title>
+			<short-title>Display Line</short-title>
 			<keywords></keywords>
 		</portlet-info>
 		<security-role-ref>

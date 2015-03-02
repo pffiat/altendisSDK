@@ -25,15 +25,15 @@ import com.liferay.util.bridges.mvc.MVCPortlet;
 public class TrainingsCarousel extends MVCPortlet {
 
 	@Override
-	public void doView(RenderRequest renderRequest, RenderResponse renderResponse) throws IOException, PortletException {
+	public void doView(final RenderRequest renderRequest, final RenderResponse renderResponse) throws IOException, PortletException {
 
-		ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
+		final ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
 
 		try {
 			long calendarId = 0;
 
-			List<Calendar> cals = CalendarLocalServiceUtil.getCalendars(0, 100);
-			for (Calendar calendar : cals) {
+			final List<Calendar> cals = CalendarLocalServiceUtil.getCalendars(0, CalendarLocalServiceUtil.getCalendarsCount());
+			for (final Calendar calendar : cals) {
 				if (calendar.getGroupId() == themeDisplay.getLayout().getGroupId()) {
 					calendarId = calendar.getCalendarId();
 					break;
@@ -43,11 +43,11 @@ public class TrainingsCarousel extends MVCPortlet {
 			// if we get the calendar
 			if (calendarId > 0) {
 
-				java.util.Calendar cal = GregorianCalendar.getInstance();
+				final java.util.Calendar cal = GregorianCalendar.getInstance();
 				cal.setTime(new Date());
 				cal.add(GregorianCalendar.YEAR, 1);
 
-				List<CalendarBooking> bookings = CalendarBookingLocalServiceUtil.getCalendarBookings(calendarId, new Date().getTime(),
+				final List<CalendarBooking> bookings = CalendarBookingLocalServiceUtil.getCalendarBookings(calendarId, new Date().getTime(),
 						cal.getTimeInMillis());
 
 				Collections.sort(bookings, new OrderEventByDate());
@@ -57,7 +57,7 @@ public class TrainingsCarousel extends MVCPortlet {
 
 			super.doView(renderRequest, renderResponse);
 
-		} catch (SystemException e) {
+		} catch (final SystemException e) {
 			e.printStackTrace();
 		}
 	}

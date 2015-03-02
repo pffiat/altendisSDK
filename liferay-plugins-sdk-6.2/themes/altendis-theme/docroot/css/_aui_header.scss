@@ -234,12 +234,16 @@
 		}	
 		.altendis-description {
 			bottom:140px;
-			left: 38%;
+			left: 37.7%;
 		}
 	}
 }
 
-/*   RIBBON : THE YELLOW BANNER */
+/*
+ *
+ *   RIBBON  *
+ 			 *
+ 			 */
 
 
 #ribbon {
@@ -254,16 +258,16 @@
 #textRibbon {    
 	position: absolute;
   	display: flex;
-    margin-left: auto;
-    margin-right: auto;  
+    margin-left: 10%;
+    margin-right: 10%;
     z-index: 600;
-    width: 100%;
+    width: 80%;
     height: 100%;
 
     top: 0px;
 
     text-align: center;
-    color: rgba(123, 82, 82, 1);
+    color: white;
 }
 
 #textRibbon .text {
@@ -276,24 +280,19 @@
    position: relative;
    margin: 0 auto;
    height: 80px;
-   top: 65px;
+   top: 0px;
 }
 
 .rectangle {
-   background: #ecc350;
+   background: $colorRibbon;
    height: 100%;
    position: relative;
-   -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
-   box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
-   -webkit-border-radius: 3px;
-   -moz-border-radius: 3px;
-   border-radius: 3px;
    z-index: 500; /* the stack order: foreground */
    margin: 0em 0;
 }
 
 .l-triangle-top {
-   border-color: #eeb73e transparent transparent;
+   border-color: $colorRibbon transparent transparent;
    border-style:solid;
    border-width:50px;
    height:0px;
@@ -305,7 +304,7 @@
 }
  
 .l-triangle-bottom {
-   border-color: transparent transparent #eeb73e;
+   border-color: transparent transparent $colorRibbon;
    border-style:solid;
    border-width:50px;
    height:0px;
@@ -317,7 +316,7 @@
 }
 
 .r-triangle-top {
-   border-color: #eeb73e transparent transparent;
+   border-color: $colorRibbon transparent transparent;
    border-style:solid;
    border-width:50px;
    height:0px;
@@ -329,7 +328,7 @@
 }
  
 .r-triangle-bottom {
-   border-color: transparent transparent #eeb73e;
+   border-color: transparent transparent $colorRibbon;
    border-style:solid;
    border-width:50px;
    height:0px;
@@ -340,38 +339,96 @@
    right: -145px;
 }
 
+#left-triangle {  
+  z-index : 601;
+  position: absolute;
+  top:10px;
+  left:0px;
+  width: 0px;
+  height: 0px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 12px solid $background;
+}
 
+#right-triangle {  
+  z-index : 601;
+  position: absolute;
+  top:10px;
+  right:0px;
+  width: 0px;
+  height: 0px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 12px solid $background;
+}
 
+@media (max-width: 500px) {
+	#right-triangle    {	opacity: 100;	}
+	#left-triangle 	   {	opacity: 100;	}
+	.l-triangle-bottom {	opacity: 0;		}
+	.l-triangle-top    {	opacity: 0;		}
+	.r-triangle-bottom {	opacity: 0;		}
+	.r-triangle-top    {	opacity: 0;		}
+	
+	#textRibbon .text {
+		width: 90%;
+		font-size: 0.7em;
+	}
+}
+
+@media (min-width: 500px) {
+	#right-triangle    {	opacity: 0;		}
+	#left-triangle 	   {	opacity: 0;		}
+	.l-triangle-bottom {	opacity: 100;	}
+	.l-triangle-top    {	opacity: 100;	}
+	.r-triangle-bottom {	opacity: 100;	}
+	.r-triangle-top    {	opacity: 100;	}
+	
+	#textRibbon .text {
+		font-size: 0.8em;
+	}
+	
+	.rectangle {
+	   -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	   box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	   -webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	   border-radius: 3px;
+	}
+}
+
+@media (max-width: 1600px) {
+   #navigation_container {
+   	 width: 80%;
+   	 max-width:550px;
+   	 top: 412px;
+   }
+   
+   /* push everything under the header done to let the place to the ribbon*/
+   #wrapper {
+   	 margin-top: 10px;
+   }
+	
+}
 
 @media (min-width: 1600px) {
 
    #navigation_container {
    	 width: 400px;
-   	 top: 65px;
    }
 
 }
 
 @media (min-width: 1900px) {
    #navigation_container {
-   	 width: 550px;
-   	 top: 65px;
-   }
+   	 width: 550px;   }
 }
 
-@media (max-width: 1600px) {
-   #navigation_container {
-   	 width: 550px;
-   	 top: 510px;
-   }
-   
-   #wrapper {
-   	 margin-top: 50px;
-   }
-	
-}
+/* end of ribbon banner*/
 
 /* position for the Language portlet*/
+
 #p_p_id_82_ {
 	position: relative;
     left: 10px;
@@ -380,11 +437,13 @@
 
 @media (min-width: 1300px) {
 	#p_p_id_82_ {
-		top:-110px;
+		top:-35px;
 	}
 }
 @media (max-width: 1300px) {
 	#p_p_id_82_ {
-		top:-70px;
+		top:10px;
 	}
 }
+
+/* end for Language portlet*/

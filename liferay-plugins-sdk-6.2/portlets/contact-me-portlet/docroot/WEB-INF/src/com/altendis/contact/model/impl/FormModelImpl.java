@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Lesser General Public License as published by the Free
@@ -67,7 +67,7 @@ public class FormModelImpl extends BaseModelImpl<Form> implements FormModel {
 			{ "email", Types.VARCHAR },
 			{ "comment_", Types.VARCHAR }
 		};
-	public static final String TABLE_SQL_CREATE = "create table Altendis_Form (formId LONG not null primary key,groupId LONG,createDate DATE null,nom VARCHAR(75) null,prenom VARCHAR(75) null,telephone VARCHAR(16) null,email VARCHAR(75) null,comment_ STRING null)";
+	public static final String TABLE_SQL_CREATE = "create table Altendis_Form (formId LONG not null primary key,groupId LONG,createDate DATE null,nom VARCHAR(75) null,prenom VARCHAR(75) null,telephone VARCHAR(75) null,email VARCHAR(75) null,comment_ VARCHAR(75) null)";
 	public static final String TABLE_SQL_DROP = "drop table Altendis_Form";
 	public static final String ORDER_BY_JPQL = " ORDER BY form.formId ASC";
 	public static final String ORDER_BY_SQL = " ORDER BY Altendis_Form.formId ASC";

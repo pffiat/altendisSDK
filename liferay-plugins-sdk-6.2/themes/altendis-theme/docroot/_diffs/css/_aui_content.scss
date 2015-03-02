@@ -98,7 +98,7 @@ li {
 		text-align: center;
 		
 		i {
-			color:#74CAEE;
+			color:$colorRibbon;
 			margin-bottom: 7px;
 		}
 		
@@ -111,7 +111,7 @@ li {
 		background-color:#F5F5F5;
 		margin-bottom:20px;
 		i {
-			color:#74CAEE;
+			color:$colorRibbon;
 			margin-bottom: 0px;
 		}
 		
@@ -129,7 +129,7 @@ li {
 		text-align: center;
 		
 		i {
-			color:#74CAEE;
+			color:$colorRibbon;
 			margin-bottom: 7px;
 		}
 		
@@ -142,7 +142,7 @@ li {
 		background-color:#F5F5F5;
 		margin-bottom:20px;
 		i {
-			color:#74CAEE;
+			color:$colorRibbon;
 			margin-bottom: 0px;
 		}
 		
@@ -152,7 +152,7 @@ li {
 @include respond-to(tablet, desktop) {
 	.main-content-altendis  {
 		max-width: 940px;
-		padding: 1em 0 0;
+		padding: 2em 0 0;
 	}
 	
 	.liste-formations {

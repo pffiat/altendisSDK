@@ -4,7 +4,7 @@ create table Altendis_Form (
 	createDate DATE null,
 	nom VARCHAR(75) null,
 	prenom VARCHAR(75) null,
-	telephone VARCHAR(16) null,
+	telephone VARCHAR(75) null,
 	email VARCHAR(75) null,
-	comment_ STRING null
+	comment_ VARCHAR(75) null
 );

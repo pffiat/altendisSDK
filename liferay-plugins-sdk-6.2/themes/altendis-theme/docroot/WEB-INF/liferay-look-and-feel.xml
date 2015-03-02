@@ -9,8 +9,8 @@
 		<settings>
 			<setting configurable="true" key="text_ribbon" type="textarea" value="" />
 			<setting configurable="true" key="text_ribbon_en" type="textarea" value="" />
-			<setting configurable="true" key="date_begginning_ribbon" value="dd/mm/yyyy" />
-			<setting configurable="true" key="date_ending_ribbon" value="dd/mm/yyyy" />
+			<setting configurable="true" key="date_begginning_ribbon" value="1970/01/01" />
+			<setting configurable="true" key="date_ending_ribbon" value="1970/01/01" />
 		</settings>
 	</theme>
 </look-and-feel>

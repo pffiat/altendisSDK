@@ -15,16 +15,20 @@
 			<jsp:setProperty name="end" property="time" value="${booking.endTime}" />	
 			
 			<c:set var="title" ><liferay-ui:message key="${booking.titleCurrentValue}" /></c:set>
+			<c:set var="to_au"><liferay-ui:message key="jusquau" /></c:set>
+			
+			<c:set var="monthNum"><fmt:formatDate value="${end }" pattern="M" /></c:set>
+			<c:set var="month"><liferay-ui:message key="${monthNum}" /></c:set>
 			
 			<c:choose>
 				<c:when test="${booking.startTime+25*60*60*1000 gt booking.endTime }">
 				<a class="node-content animate-scroll" style="display:none;" href="#${fn:replace(title,' ', '')}">
-					${title } (${status.count}/${bookings.size()})<br/><fmt:formatDate value="${end }" dateStyle="long" /> (Paris)
+					${title } (${status.count}/${bookings.size()})<br/><fmt:formatDate value="${end }" pattern="d" /> ${month } <fmt:formatDate value="${end }" pattern="y" /> (Paris)
 				</a>
 				</c:when>
 				<c:otherwise>
 				<a class="node-content animate-scroll" style="display:none;" href="#${fn:replace(title,' ', '')}">
-					${title } (${status.count}/${bookings.size()})<br/><fmt:formatDate value="${start }" pattern="d" /> <liferay-ui:message key="${au}" /> <fmt:formatDate value="${end }" dateStyle="long" /> (Paris)
+					${title } (${status.count}/${bookings.size()})<br/><fmt:formatDate value="${start }" pattern="d" /> ${to_au} <fmt:formatDate value="${end }" pattern="d" /> ${month } <fmt:formatDate value="${end }" pattern="y" /> (Paris)
 				</a>
 				</c:otherwise>
 			</c:choose>

@@ -12,12 +12,11 @@ This file allows you to override and define new Velocity variables.
 
 #set ($format=$dateUtil.getISOFormat($date_beginning))
 
-#set ($toDisplayOneLine = false)
-#set ($toDisplayTwoLine = false)
+#set ($toDisplay = false)
 
 #if ( $format.parse($date_beginning).getTime() < $dateTool.getDate().getTime() && $format.parse($date_ending).getTime() > $dateTool.getDate().getTime() )
 
-		#set ($toDisplayOneLine = true)
+		#set ($toDisplay = true)
 		
 		#if( $language_id == "fr_FR" || $language_id == "fr_BE" || $language_id == "fr_CA" || $language_id == "fr_LU" )
 			#set ($text_ribbon = $theme.getSetting("text_ribbon"))			

@@ -56,8 +56,14 @@
       background-position: 0 0; } }
 
   /* ---------- Imports ---------- */
-  /*   RIBBON : THE YELLOW BANNER */
+  /*
+   *
+   *   RIBBON  *
+   			 *
+   			 */
+  /* end of ribbon banner*/
   /* position for the Language portlet*/
+  /* end for Language portlet*/
   /*!
    * Bootstrap Responsive v2.3.2
    *
@@ -4557,7 +4563,7 @@
       bottom: 65px; }
     .aui #banner-theme .altendis-description {
       bottom: 140px;
-      left: 38%; } }
+      left: 37.7%; } }
   .aui #ribbon {
     list-style: none;
     display: block;
@@ -4567,14 +4573,14 @@
   .aui #textRibbon {
     position: absolute;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+    margin-right: 10%;
     z-index: 600;
-    width: 100%;
+    width: 80%;
     height: 100%;
     top: 0px;
     text-align: center;
-    color: #7b5252; }
+    color: white; }
   .aui #textRibbon .text {
     font-family: auto;
     font-size: 0.9em;
@@ -4583,21 +4589,16 @@
     position: relative;
     margin: 0 auto;
     height: 80px;
-    top: 65px; }
+    top: 0px; }
   .aui .rectangle {
-    background: #ecc350;
+    background: #009de0;
     height: 100%;
     position: relative;
-    -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
     z-index: 500;
     /* the stack order: foreground */
     margin: 0em 0; }
   .aui .l-triangle-top {
-    border-color: #eeb73e transparent transparent;
+    border-color: #009de0 transparent transparent;
     border-style: solid;
     border-width: 50px;
     height: 0px;
@@ -4607,7 +4608,7 @@
     top: 2px;
     left: -50px; }
   .aui .l-triangle-bottom {
-    border-color: transparent transparent #eeb73e;
+    border-color: transparent transparent #009de0;
     border-style: solid;
     border-width: 50px;
     height: 0px;
@@ -4617,7 +4618,7 @@
     top: -24px;
     left: -150px; }
   .aui .r-triangle-top {
-    border-color: #eeb73e transparent transparent;
+    border-color: #009de0 transparent transparent;
     border-style: solid;
     border-width: 50px;
     height: 0px;
@@ -4627,7 +4628,7 @@
     right: -45px;
     top: -77px; }
   .aui .r-triangle-bottom {
-    border-color: transparent transparent #eeb73e;
+    border-color: transparent transparent #009de0;
     border-style: solid;
     border-width: 50px;
     height: 0px;
@@ -4636,30 +4637,88 @@
     float: right;
     top: -104px;
     right: -145px; }
+  .aui #left-triangle {
+    z-index: 601;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 12px solid #eeeeee; }
+  .aui #right-triangle {
+    z-index: 601;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 0px;
+    height: 0px;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 12px solid #eeeeee; }
+  @media (max-width: 500px) {
+    .aui #right-triangle {
+      opacity: 100; }
+    .aui #left-triangle {
+      opacity: 100; }
+    .aui .l-triangle-bottom {
+      opacity: 0; }
+    .aui .l-triangle-top {
+      opacity: 0; }
+    .aui .r-triangle-bottom {
+      opacity: 0; }
+    .aui .r-triangle-top {
+      opacity: 0; }
+    .aui #textRibbon .text {
+      width: 90%;
+      font-size: 0.7em; } }
+  @media (min-width: 500px) {
+    .aui #right-triangle {
+      opacity: 0; }
+    .aui #left-triangle {
+      opacity: 0; }
+    .aui .l-triangle-bottom {
+      opacity: 100; }
+    .aui .l-triangle-top {
+      opacity: 100; }
+    .aui .r-triangle-bottom {
+      opacity: 100; }
+    .aui .r-triangle-top {
+      opacity: 100; }
+    .aui #textRibbon .text {
+      font-size: 0.8em; }
+    .aui .rectangle {
+      -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px; } }
+  @media (max-width: 1600px) {
+    .aui {
+      /* push everything under the header done to let the place to the ribbon*/ }
+      .aui #navigation_container {
+        width: 80%;
+        max-width: 550px;
+        top: 412px; }
+      .aui #wrapper {
+        margin-top: 10px; } }
   @media (min-width: 1600px) {
     .aui #navigation_container {
-      width: 400px;
-      top: 65px; } }
+      width: 400px; } }
   @media (min-width: 1900px) {
     .aui #navigation_container {
-      width: 550px;
-      top: 65px; } }
-  @media (max-width: 1600px) {
-    .aui #navigation_container {
-      width: 550px;
-      top: 510px; }
-    .aui #wrapper {
-      margin-top: 50px; } }
+      width: 550px; } }
   .aui #p_p_id_82_ {
     position: relative;
     left: 10px;
     z-index: 100; }
   @media (min-width: 1300px) {
     .aui #p_p_id_82_ {
-      top: -110px; } }
+      top: -35px; } }
   @media (max-width: 1300px) {
     .aui #p_p_id_82_ {
-      top: -70px; } }
+      top: 10px; } }
   .aui .flow-navbar {
     position: absolute;
     bottom: 0px;
@@ -4711,8 +4770,8 @@
           background: white;
           margin-top: 50px;
           width: 100%;
-          border-top: 1px solid #EEEEEE;
-          border-bottom: 2px solid #EEEEEE;
+          border-top: 1px solid #eeeeee;
+          border-bottom: 2px solid #eeeeee;
           z-index: 1000; }
           .aui .flow-navbar .navbar .navbar-inner .nav-collapse .nav {
             width: 100%;
@@ -4721,7 +4780,7 @@
             font-weight: bold; }
             .aui .flow-navbar .navbar .navbar-inner .nav-collapse .nav > li {
               display: block;
-              border-bottom: 1px solid #EEEEEE;
+              border-bottom: 1px solid #eeeeee;
               line-height: 30px;
               /* Not focused not active navbar item */ }
               .aui .flow-navbar .navbar .navbar-inner .nav-collapse .nav > li > a {
@@ -4839,7 +4898,7 @@
     margin: 0px 10px 10px 20px;
     text-align: center; }
     .aui .ebiz-overview .icone i {
-      color: #74CAEE;
+      color: #009de0;
       margin-bottom: 7px; }
     .aui .ebiz-overview .icone .btn {
       display: none; }
@@ -4847,7 +4906,7 @@
     background-color: #F5F5F5;
     margin-bottom: 20px; }
     .aui .ebiz-overview .btn-mobile i {
-      color: #74CAEE;
+      color: #009de0;
       margin-bottom: 0px; }
   .aui .formation-overview .btn {
     background: none; }
@@ -4855,7 +4914,7 @@
     margin: 0px 20px 0px 10px;
     text-align: center; }
     .aui .formation-overview .icone i {
-      color: #74CAEE;
+      color: #009de0;
       margin-bottom: 7px; }
     .aui .formation-overview .icone .btn {
       display: none; }
@@ -4863,12 +4922,12 @@
     background-color: #F5F5F5;
     margin-bottom: 20px; }
     .aui .formation-overview .btn-mobile i {
-      color: #74CAEE;
+      color: #009de0;
       margin-bottom: 0px; }
   @media (min-width: 768px) {
     .aui .main-content-altendis {
       max-width: 940px;
-      padding: 1em 0 0; }
+      padding: 2em 0 0; }
     .aui .liste-formations .span3 {
       width: 290px; }
       .aui .liste-formations .span3 .livre {
@@ -5093,9 +5152,9 @@
     font-weight: 300;
     font-size: 1.4em;
     line-height: 1.4;
-    background: #EEEEEE; }
+    background: #eeeeee; }
   .aui .hand {
-    color: #74caee; }
+    color: #009de0; }
   .aui .text-justify {
     text-align: justify; }
   .aui .portlet-title-text {
